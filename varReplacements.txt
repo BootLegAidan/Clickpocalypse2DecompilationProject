@@ -1,0 +1,38 @@
+Current decompile spot
+  12435
+
+$q    ->  speedWalkerPotion
+ar    ->  fasterFarmingPotion
+br    ->  fasterInfestationPotion
+cr    ->  infiniteScrollsPotion
+dr    ->  guaranteedItemDropsPotion
+er    ->  potionDurationPotion
+fr    ->  freeSpellCastingPotion
+gr    ->  moreKillsPerFarmPotion
+hr    ->  docileMonstersPotion
+ir    ->  higherItemValuesPotion
+jr    ->  autoFiringScrollsPotion
+kr    ->  doubleGoldDropsPotion
+lr    ->  doubleItemDropsPotion
+Bg    ->  randomTreasureRoomPotion
+Sh    ->  moreMonstersPotion
+Sq    ->  potionInfo
+  .ic ->  .name
+  .jc ->  .img
+  .tc ->  .desc
+  .uc ->  .title
+  .vc ->  .id
+Qh    ->  randomBossEncounterPotion
+Uq    ->  getPotionVals
+Xq    ->  doubleGoldDropValuePotion
+Yq    ->  doubleKillsPotion
+Zh    ->  frailMonstersPotion
+Zq    ->  doubleExperiencePotion
+
+sh (function)
+  Might be something to do with messages that show on the canvas:
+    death messages
+    "IMMUNE"
+    damage(?)
+E (object)
+  I think it has the kill upgrades in it
