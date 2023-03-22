@@ -32,7 +32,9 @@
 
 <!-- Game is 1024x768, center aligned. -->
 <div class="gameContainer" id="gameContainer">
-    <div class="tabMenu" id="gameTabMenu"></div>
+    <div class="tabMenu" id="gameTabMenu">
+
+    </div>
     <div class="gameTitleContainer">CLICKPOCALYPSE II</div>
     <div class="pauseButtonContainer">
         <div id="pauseButton" class="upgradeButton">Pause</div>
@@ -460,339 +462,13 @@
 
             <div id="recentChanges" class="infoTabRecentChanges">
                 <div class="sectionTitle" style="margin-bottom:5px;">Recent Changes</div>
-                2015-09-18
                 <ul>
-                    <li>Removed stupid 20,000 bookcase achievement</li>
+                  2023-02-03
+                  <li>Added Cheats</li>
+                  <li>Renamed the most of the potion stuff</li>
+                  <li>Started the project</li>
                 </ul>
-                2015-07-30
-                <ul>
-                    <li>Point upgrade: Shops buy your items for more gold.</li>
-                    <li>Point upgrade: Permanent attack cool-down reduction.</li>
-                    <li>Point upgrade: Health regeneration.</li>
-                    <li>Point upgrade: Spirit regeneration.</li>
-                </ul>
-                2015-07-28
-                <ul>
-                    <li>'power save mode': The game keeps track of whether or not it is currently visible, does not update the UI when not visible.</li>
-                    <li>Bug fix: Found bug where ninja swift strike spell could get stuck in an enabled state, never letting the ninja out of the room.</li>
-                    <li>Added more simple achievements.</li>
-                </ul>
-                2015-07-26
-                <ul>
-                    <li>Instant loot spell earns adventure points for looting gold, potions, scrolls, items and finding rare items.</li>
-                    <li>Added upgrade for minimum monsters per room setting.</li>
-                    <li>Encounter notification panel displays current/total monster count.</li>
-                    <li>Boss monster level same as max party member level.</li>
-                </ul>
-                2015-07-25
-                <ul>
-                    <li>Changed upgrade buttons so that they will not reorder themselves strangely after being clicked.</li>
-                    <li>Potentially fixed party exploration bug where adventurers get stuck/separated. Hard to know if really fixed.</li>
-                    <li>Crowd controls spells (web, sleep, turn), never fail.</li>
-                </ul>
-                2015-07-24
-                <ul>
-                    <li>Increased gold drop upgrade amounts.</li>
-                    <li>Added fix for bug where the party somehow walks past the edge of the world.
-                        This really just fixes the result of a bug, rather than actually solving the issue
-                        of how the party manages to walk past the edge of the world in the first place.</li>
-                </ul>
-                2015-07-20
-                <ul>
-                    <li>Hopefully fixed the 'exit level without looting' bug.</li>
-                    <li>Hopefully fixed Windows 10 fast animation bug.</li>
-                    <li>Hopefully fixed negative play time bug.</li>
-                    <li>New point upgrades: Offline Time Bonus.</li>
-                    <li>Fixed continuation achievement bug.</li>
-                </ul>
-                2015-07-19
-                <ul>
-                    <li>Changed continuation faulty achievement logic.</li>
-                    <li>Number of monsters in encounter updated as they are killed.</li>
-                    <li>Possibly fixed the bug where adventurers leave castle without looting last room.</li>
-                    <li>New potion: Double gold drops. Dead monsters drop two piles of gold instead of one.</li>
-                    <li>New potion: Double item drops. Dead monsters drop two items instead of one.</li>
-                    <li>New potion: Random Treasure Rooms. Small chance of room being full of treasure.</li>
-                    <li>New potion: Random Boss Fights. Small chance of boss encounter.</li>
-                </ul>
-                2015-07-18
-                <ul>
-                    <li>Fixed stupid bug causing error message.</li>
-                    <li>Added AI to make characters not stand in door ways.</li>
-                    <li>Added option to display FPS.</li>
-                    <li>Small improvement to electromancer chain lightning (1 extra hop).</li>
-                </ul>
-                2015-07-17
-                <ul>
-                    <li>Added support for sprite render order, which fixes the issue where characters are always rendered on
-                        top of walls and tree and things that they are really supposed to be behind.</li>
-                    <li>Added ability to disable sprite render order.</li>
-                </ul>
-                2015-07-12
-                <ul>
-                    <li>Processed offline time added to play time statistics.</li>
-                    <li>Added option to disable inactive tab processing.</li>
-                    <li>Fixed 'Play With Smaller Party' achievements.</li>
-                    <li>More Minion Achievements.</li>
-                    <li>New Potion: Frail Monsters.</li>
-                    <li>New Potion: Auto Firing Scrolls.</li>
-                    <li>Additional Point Upgrade: Added another 'Cheaper Monster Levels' upgrade.</li>
-                    <li>New Point Upgrade: More Kills Per Farm.</li>
-                </ul>
-                2015-07-11
-                <ul>
-                    <li>New Adventure Point Upgrade: Potion Duration +15%</li>
-                    <li>Numpad support for scrolls</li>
-                    <li>Fixed achievement count bug in points tab.</li>
-                    <li>Fixed blank achievements bug on points tab.</li>
-                </ul>
-                2015-07-10
-                <ul>
-                    <li>New Adventure Point Upgrade: Cheaper Monster Levels</li>
-                    <li>New Potion: Items dropped while potion is active are worth more gold.</li>
-                    <li>Tabs slightly less wide</li>
-                    <li>Fixed potion save bug, potions in unlocked slots should save properly now.</li>
-                    <li>Possible fix for the 'ninjas stuck in hallway' bug.</li>
-                </ul>
-                2015-07-09
-                <ul>
-                    <li>Fixed bug related to spending adventure points.</li>
-                    <li>Fixed 'redundant party' bug.</li>
-                    <li>Hopefully fixed 'repetitively switching back to game tab' bug.</li>
-                    <li>New potion: Docile Monsters (free kills, basically)</li>
-                    <li>New Upgrade: Min Gold Per Drop</li>
-                    <li>Upgraded Upgrade: 'Max Gold Per Drop' can be upgraded to higher value</li>
-                    <li>Number of spendable skill points displayed in tab.</li>
-                </ul>
-                2015-07-08
-                <ul>
-                    <li>Added adventure point upgrades so that you can spent those points.</li>
-                    <li>Unlockable potion slots.</li>
-                    <li>Unlockable character slot.</li>
-                    <li>Upgrade walking speed.</li>
-                    <li>Upgrade scroll stacking.</li>
-                    <li>Upgrade farm discount.</li>
-                </ul>
-                2015-07-05
-                <ul>
-                    <li>Game options saved.</li>
-                    <li>Game options lets you disable offline processing.</li>
-                    <li>Max offline processing time increased to 12 hours.</li>
-                    <li>Ninja balance adjustments to make him less feeble (new items will give better health and armor).</li>
-                    <li>New potion: More Kills Per Farm</li>
-                </ul>
-                2015-07-04
-                <ul>
-                    <li>Offline processing support added.</li>
-                    <li>Background tab support added (same as offline processing, really).</li>
-                </ul>
-                2015-07-03
-                <ul>
-                    <li>Ninja returns to original spot after swift strike.</li>
-                    <li>Electromancer chain lightning hits more monsters.</li>
-                    <li>Spell cool downs greatly reduced.</li>
-                </ul>
-                2015-07-02
-                <ul>
-                    <li>Added a few more achievements.</li>
-                    <li>Fixed an achievement bug.</li>
-                    <li>Added loot AI change so that characters do not attempt to loot the same things.</li>
-                </ul>
-                2015-07-01
-                <ul>
-                    <li>Added Achievements.</li>
-                    <li>Added Adventure Points.</li>
-                    <li>Removed cap on prestige skill points.</li>
-                </ul>
-                2015-06-23
-                <ul>
-                    <li>Added more statistics.</li>
-                    <li>Faster item gathering: adventurers help each other gather items.</li>
-                    <li>Faster item gathering: minions help gather items.</li>
-                    <li>Bug fix: Level up buttons have names from previous party after reset.</li>
-                    <li>Bug fix: Highlighted tab un-highlighted on reset.</li>
-                </ul>
-                2015-06-20
-                <ul>
-                    <li>Parties can have duplicate character classes.</li>
-                    <li>Parties can have less than 4 members.</li>
-                    <li>Minions harvest potions and scrolls.</li>
-                    <li>Minion positions NOT included when determining camera center. Too jerky.</li>
-                </ul>
-                2015-06-17
-                <ul>
-                    <li>Added scroll hot keys (1-6).</li>
-                    <li>Dungeon table includes castle name.</li>
-                    <li>Minion positions included when determining camera center.</li>
-                    <li>Graphics Options (disable text, effects and the map overlay).</li>
-                </ul>
-                2015-06-16
-                <ul>
-                    <li>Hopefully Fixed UI bug in adventurer status section.</li>
-                    <li>Summoners will not wait for combat to call upon their minions.</li>
-                    <li>Bug fix: Infinite Scrolls potion should work for scrolls that had a count of 0.</li>
-                    <li>Bug fix: Spell cost should never exceed max spirit of character.</li>
-                    <li>Bug fix: Scrolls sometimes not clickable as soon as room is opened.</li>
-                    <li>Spider web spell should target monsters a little more randomly.</li>
-                </ul>
-                2015-06-15
-                <ul>
-                    <li>Removed potion queue concept, replaced it with simultaneous potion usage.</li>
-                    <li>Improved implementation of faster farming potion</li>
-                    <li>New Potion: Faster Dungeon Infestation</li>
-                    <li>New Potion: Infinite Scrolls (this one is cool)</li>
-                    <li>New Potion: More Monsters (10 more monsters per room)</li>
-                    <li>New Potion: 100% Item Drops (all monsters drop an item when killed)</li>
-                    <li>New Potion: Potions Last Longer (meta potion that affects other potions)</li>
-                    <li>New Potion: Free Spell Casting (spells cost no spirit)</li>
-                    <li>Small increase in walking speed.</li>
-                </ul>
-                2015-06-14
-                <ul>
-                    <li>Added character stats: stun count, minion kills, damage given, damage received.</li>
-                    <li>Gameplay adjustment: Stun effect removed at end of combat. The delay was pointless and had to go.</li>
-                    <li>Bug fix: Active potion effect cleared when game is reset.</li>
-                    <li>Active potion can be dropped.</li>
-                    <li>Potions can be queued. </li>
-                    <li>Fighter will taunt if healthy, regardless of the situation of the other party members.</li>
-                </ul>
-                2015-06-13
-                <ul>
-                    <li>Bug fix: Priest's revive spell woes.</li>
-                    <li>Bug fix: Skill point bug after continuation.</li>
-                    <li>Bug fix: Fighter taunt spell if there are no 'vulnerable' characters in the party.</li>
-                    <li>Bug fix: Spells not able to be cast if party has continued after game victory.</li>
-                    <li>Bug fix: Prevent loot from being dropped outside of room.</li>
-                    <li>Guardian ninjas in castles use Swift Strike ability on you.</li>
-                    <li>Added pause/resume button.</li>
-                    <li>Added new character class. Very silly and probably over powered.</li>
-                </ul>
-                2015-06-09
-                <ul>
-                    <li>Rogue prioritizes treasure chests over regular loot.</li>
-                    <li>Adventurers don't kill turned or disabled enemies unless there are no other enemies.</li>
-                    <li>Health bars are different colors for monsters, minions and adventurers.</li>
-                </ul>
-                2015-06-08
-                <ul>
-                    <li>Less confusing upgrades.</li>
-                    <li>Potions can be dropped.</li>
-                    <li>Fewer un-lootable treasure chests.</li>
-                </ul>
-                2015-06-07 (v. 1.0)
-                <ul>
-                    <li>Added new character classes.</li>
-                    <li>Added party creation screen.</li>
-                    <li>Add game over screen.</li>
-                    <li>Added prestige.</li>
-                    <li>Added scrolls to let the player kill monsters.</li>
-                    <li>Added potions to enable various bonuses.</li>
-                    <li>Added treasure chests, weapon racks and book cases.</li>
-                    <li>Added castles and regions.</li>
-                    <li>Added Bosses and castle guardians.</li>
-                    <li>Lots of skill tree changes.</li>
-                    <li>Replaced item quality concept with item rarity, no upper limit on item upgrades.</li>
-                    <li>Replaced monster tier concept with monster level, no upper limit on monster upgrades.</li>
-                    <li>Characters are stunned for a period when their health reaches 0.</li>
-                    <li>Added statistics to info tab.</li>
-                </ul>
-                2015-03-15
-                <ul>
-                    <li>Fixed critical hit chance bug.</li>
-                    <li>Priest buffs and fighter taunt take effect immediately rather than after the animation finishes.</li>
-                    <li>Upgrade buttons will no longer switch under your mouse. New upgrades show up below existing upgrades.</li>
-                    <li>New Fighter skills related to multiple attacks.</li>
-                </ul>
-                2015-03-14
-                <ul>
-                    <li>Added taunt skill for the fighter.</li>
-                    <li>Added critical hit skills for the fighter.</li>
-                    <li>Fixed stupid monster retirement bug for the third time.</li>
-                </ul>
-                2015-03-10
-                <ul>
-                    <li>Adventurers don't wander into a group of monsters to pick up loot.</li>
-                    <li>The wizard and ranger try to keep their distance from monsters.</li>
-                </ul>
-                2015-03-09
-                <ul>
-                    <li>Hopefully fixing a negative farming percentage bug that some people reported.</li>
-                </ul>
-                2015-03-08
-                <ul>
-                    <li>Fixed monster retirement bug that let you retire all the monsters.</li>
-                    <li>Fixed farming progress bug when reloading from a save.</li>
-                    <li>Fixed 'Delete Save' bug.</li>
-                    <li>The wizard gets a spell right at the start.</li>
-                    <li>Monsters slightly less powerful in early levels.</li>
-                    <li>Item power scaled back a bit.</li>
-                    <li>Priest healing spell is more powerful.</li>
-                    <li>Monster tiers cost a lot more.</li>
-                    <li>All monster tiers other than Titanic can be retired.</li>
-                </ul>
-                2015-03-06
-                <ul>
-                    <li>Item equip button displays change in value rather than absolute value.</li>
-                    <li>Balance adjustment: Characters need more XP to go up levels.</li>
-                    <li>Balance adjustment: Monsters give less XP when killed.</li>
-                    <li>Balance adjustment: Monsters characteristics.</li>
-                    <li>Balance adjustment: Dungeons cost more gold.</li>
-                    <li>Balance adjustment: Items are worth less gold and are less powerful.</li>
-                    <li>Balance adjustment: Priest buffs are less powerful.</li>
-                    <li>Fixed annoying skill point '*' bug.</li>
-                    <li>Fixed monster retirement bug. (and then, fixed it again)</li>
-                </ul>
-                2015-03-02
-                <ul>
-                    <li>Fixed disappearing upgrade button bug.</li>
-                    <li>Added monster stat info to the monster upgrade button.</li>
-                </ul>
-                2015-03-01
-                <ul>
-                    <li>Castles farm dungeons and earn your party kills.</li>
-                    <li>Added attack rating and defence rating characteristics.</li>
-                    <li>Reworked combat math to use attack/defence ratings.</li>
-                    <li>Changed around UI to consolidate character class information under one tab.</li>
-                    <li>Kills based upgrades are disabled when their max value is reached.</li>
-                    <li>Greyed out upgrade buttons should not be sorted above an available upgrade.</li>
-                    <li>Removed unbalanced health and spirit regeneration effects.</li>
-                    <li>Re-characterized some item types so that characters don't compete for items.</li>
-                    <li>Big change to how items work, junk items will never be equipped over better items.</li>
-                    <li>Added item shops so your adventurers can unload their junk for gold.</li>
-                    <li>Lots of skill tree changes.</li>
-                </ul>
-                2015-01-22
-                <ul>
-                    <li>Fixed bug that caused wimpy monster tiers to be un-retired.</li>
-                    <li>If there are no infested dungeons to clear, a cleared, unsecured dungeon will be re-infested.</li>
-                </ul>
-                2015-01-19
-                <ul>
-                    <li>Fixed FOREBODING monster bug.</li>
-                    <li>Fixed arrow damage color bug on inventory screen.</li>
-                    <li>Fixed item effect bug on inventory screen.</li>
-                </ul>
-                2015-01-18
-                <ul>
-                    <li>Added counts to dungeon tabs.</li>
-                    <li>Cheaper castles.</li>
-                    <li>Fixed reset bug where party would not re-enter some dungeons from the previous game.</li>
-                </ul>
-                2015-01-17
-                <ul>
-                    <li>Fixed effect cell bug on inventory panel.</li>
-                    <li>Started adding 'decorations' to dungeon rooms.</li>
-                    <li>Fixed dungeon selection bug causing the party to get stuck.</li>
-                    <li>Added tab for dungeons that have had their castle purchased. </li>
-                    <li>Fixed bug where party magically enters far away dungeon sometimes. </li>
-                </ul>
-                2015-01-14
-                <ul>
-                    <li>Added a way to spend gold - you buy castles to secure dungeons. </li>
-                    <li>Added dungeon tab to keep track of the dungeons. </li>
-                    <li>Fixed bug where party gets too separated when traveling overland. </li>
-                    <li>Fixed bug upgrade buttons have blue border for no reason. </li>
-                </ul>
+
             </div>
 
             <div id="information" class="infoTabInfo">
@@ -906,6 +582,46 @@
             </div>
         </div>
     </div>
+</div>
+<div class="cheatsContainer">
+  <h1>Cheats</h1>
+  <p>With the code now partially readable by humans, we can manipulate the game a lot easier. These are just a few useful things you can change, but if you go into the developer console, theres even more</p>
+  <span>
+    <label for="speed">Walk Speed Multiplier</label>
+    <input type="number" name="speed" value="1" onchange="speedWalkerPotion.t=parseFloat(this.value)">
+  </span>
+  <span>
+    <label for="gold">Gold Multiplier</label>
+    <input type="number" name="gold" value="1" onchange="doubleGoldDropsPotion.t=parseFloat(this.value)">
+  </span>
+  <span>
+    <label for="xp">XP Multiplier</label>
+    <input type="number" name="xp" value="1" onchange="doubleExperiencePotion.t=parseFloat(this.value)">
+  </span>
+  <span>
+    <label for="items">Monsters Always Drop Items</label>
+    <input type="checkbox" name="items" onchange="guaranteedItemDropsPotion.t=this.checked">
+  </span>
+  <span>
+    <label for="monsters">Extra Monsters</label>
+    <input type="number" name="monsters" value="0" min="0" onchange="moreMonstersPotion.t=parseFloat(this.value)">
+  </span>
+  <span>
+    <label for="spirit">No Spirit Needed for Spells</label>
+    <input type="checkbox" name="spirit"onchange="freeSpellCastingPotion.t=this.checked">
+  </span>
+  <span>
+    <label for="freeScrolls">Infinite Scrolls</label>
+    <input type="checkbox" name="freeScrolls" onchange="infiniteScrollsPotion.t=this.checked">
+  </span>
+  <span>
+    <label for="autofire">Automatically Use Scrolls</label>
+    <input type="checkbox" name="autofire" onchange="autoFiringScrollsPotion.t=this.checked">
+  </span>
+  <span>
+    <label for="kills">Kill Multiplier</label>
+    <input type="number" name="kills" value="1" onchange="doubleKillsPotion.t=parseFloat(this.value)">
+  </span>
 </div>
 
 <script src="c2bfed.js"></script>

@@ -1779,6 +1779,35 @@ div {
     width: 120px;
 }
 
+/* **************************************************************************************** */
+/*                                    CHEATS TAB                                            */
+/* **************************************************************************************** */
+.cheatsContainer {
+    position: absolute;
+    top: 100vh;
+    width: calc(100% - 8px);
+    box-sizing: border-box;
+    padding-bottom: 50px;
+}
+.cheatsContainer h1 {
+  text-align: center;
+}
+.cheatsContainer input[type="number"] {
+  outline: none;
+  width: 25px;
+  /* color: white; */
+  text-align: right;
+}
+.cheatsContainer label {
+  font-weight: bold;
+}
+.cheatsContainer input::-webkit-outer-spin-button,
+.cheatsContainer input::-webkit-inner-spin-button {
+  display: none;
+}
+.cheatsContainer span {
+  display: block;
+}
 
 /* **************************************************************************************** */
 /*                                     GAME OVER                                            */
@@ -1970,6 +1999,3 @@ div {
     top: 1px;
     cursor: pointer;
 }
-
-
-

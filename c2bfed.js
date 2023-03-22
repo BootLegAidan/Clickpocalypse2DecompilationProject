@@ -12293,7 +12293,7 @@ var potionInfo = [{
   name: "doubleGoldDropValue",
   title: "Double Gold",
   desc: "Gold Drop Values x2",
-  jc: "PotionLargeRose.PNG",
+  img: "PotionLargeRose.PNG",
   id: 2
 }, {
   name: "doubleKills",
@@ -12479,8 +12479,6 @@ function getPotionVals(a) {
   return null
 }
 
-// ENDED READING
-
 function Wq(a) {
   return a.mg && a.mg.t === a.mg.nc
 };
@@ -12512,7 +12510,8 @@ function nr() {
 }
 nr.prototype.zl = function() {
   var a;
-  for (a = 0; a < this.Hf.length; a++) this.Hf[a].Re(null), this.Hf[a].Se(0)
+  for (a = 0; a < this.Hf.length; a++)
+  this.Hf[a].Re(null), this.Hf[a].Se(0)
 };
 
 function or(a) {
@@ -12737,143 +12736,143 @@ Pr[17] = Mr;
 Pr[21] = Nr;
 Pr[22] = Or;
 var Qr = [ur, vr, wr, xr, yr, zr, Ar, Br, Cr, Dr, Er, Fr, Gr, Hr, Ir, Jr, Kr, Lr, Mr, Nr, Or];
-var Rr = [{
-  Yb: "moreScrollsInStack",
+var apUpgrades = [{
+  id: "moreScrollsInStack",
   title: "More Scrolls in Stack",
-  mc: "Max Scrolls +10",
-  Gb: 5E5,
+  desc: "Max Scrolls +10",
+  cost: 5E5,
   Tb: 1
 }, {
-  Yb: "cheaperFarms",
+  id: "cheaperFarms",
   title: "Cheaper Farms",
-  mc: "10% Farm Discount",
-  Gb: 1E6,
+  desc: "10% Farm Discount",
+  cost: 1E6,
   Tb: 5
 }, {
-  Yb: "extraPotionSlot1",
+  id: "extraPotionSlot1",
   title: "Extra Potion Slot",
-  mc: "One More Potion",
-  Gb: 25E5,
+  desc: "One More Potion",
+  cost: 25E5,
   Tb: 3
 }, {
-  Yb: "extraPotionSlot2",
+  id: "extraPotionSlot2",
   title: "Extra Potion Slot",
-  mc: "One More Potion",
-  Gb: 25E5,
+  desc: "One More Potion",
+  cost: 25E5,
   Tb: 3
 }, {
-  Yb: "walkingSpeedBoost1",
+  id: "walkingSpeedBoost1",
   title: "Walking Speed Boost",
-  mc: "Walk 10% Faster",
-  Gb: 4E6,
+  desc: "Walk 10% Faster",
+  cost: 4E6,
   Tb: 2
 }, {
-  Yb: "walkingSpeedBoost2",
+  id: "walkingSpeedBoost2",
   title: "Walking Speed Boost",
-  mc: "Walk 10% Faster",
-  Gb: 4E6,
+  desc: "Walk 10% Faster",
+  cost: 4E6,
   Tb: 2
 }, {
-  Yb: "offlineTimeBonus1",
+  id: "offlineTimeBonus1",
   title: "Offline Time Bonus",
-  mc: "+2 Hours",
-  Gb: 5E6,
+  desc: "+2 Hours",
+  cost: 5E6,
   Tb: 9
 }, {
-  Yb: "offlineTimeBonus2",
+  id: "offlineTimeBonus2",
   title: "Offline Time Bonus",
-  mc: "+2 Hours",
-  Gb: 5E6,
+  desc: "+2 Hours",
+  cost: 5E6,
   Tb: 9
 }, {
-  Yb: "cheaperMonsterLevels",
+  id: "cheaperMonsterLevels",
   title: "Cheaper Monster Levels",
-  mc: "10% Level Discount",
-  Gb: 6E6,
+  desc: "10% Level Discount",
+  cost: 6E6,
   Tb: 6
 }, {
-  Yb: "cheaperMonsterLevels2",
+  id: "cheaperMonsterLevels2",
   title: "Cheaper Monster Levels",
-  mc: "10% Level Discount",
-  Gb: 6E6,
+  desc: "10% Level Discount",
+  cost: 6E6,
   Tb: 6
 }, {
-  Yb: "itemSales1",
+  id: "itemSales1",
   title: "Better Item Sales",
-  mc: "Shops Pay 10% More",
-  Gb: 8E6,
+  desc: "Shops Pay 10% More",
+  cost: 8E6,
   Tb: 10
 }, {
-  Yb: "itemSales2",
+  id: "itemSales2",
   title: "Better Item Sales",
-  mc: "Shops Pay 10% More",
-  Gb: 8E6,
+  desc: "Shops Pay 10% More",
+  cost: 8E6,
   Tb: 10
 }, {
-  Yb: "moreFarmKills1",
+  id: "moreFarmKills1",
   title: "More Kills Per Farm",
-  mc: "Harvested Kills +20",
-  Gb: 7E6,
+  desc: "Harvested Kills +20",
+  cost: 7E6,
   Tb: 8
 }, {
-  Yb: "moreFarmKills2",
+  id: "moreFarmKills2",
   title: "More Kills Per Farm",
-  mc: "Harvested Kills +20",
-  Gb: 7E6,
+  desc: "Harvested Kills +20",
+  cost: 7E6,
   Tb: 8
 }, {
-  Yb: "potionTurnDuration1",
+  id: "potionTurnDuration1",
   title: "Potion Duration",
-  mc: "Last 15% Longer",
-  Gb: 8E6,
+  desc: "Last 15% Longer",
+  cost: 8E6,
   Tb: 7
 }, {
-  Yb: "potionTurnDuration",
+  id: "potionTurnDuration",
   title: "Potion Duration",
-  mc: "Last 15% Longer",
-  Gb: 8E6,
+  desc: "Last 15% Longer",
+  cost: 8E6,
   Tb: 7
 }, {
-  Yb: "extraCharacterSlot",
+  id: "extraCharacterSlot",
   title: "5th Character Slot",
-  mc: "More Carnage",
-  Gb: 1E7,
+  desc: "More Carnage",
+  cost: 1E7,
   Tb: 4
 }, {
-  Yb: "coolDownTurn1",
+  id: "coolDownTurn1",
   title: "Permanent Faster Attacks",
-  mc: "Cool-Down Turns -1",
-  Gb: 11E6,
+  desc: "Cool-Down Turns -1",
+  cost: 11E6,
   Tb: 11
 }, {
-  Yb: "coolDownTurn2",
+  id: "coolDownTurn2",
   title: "Permanent Faster Attacks",
-  mc: "Cool-Down Turns -1",
-  Gb: 11E6,
+  desc: "Cool-Down Turns -1",
+  cost: 11E6,
   Tb: 11
 }, {
-  Yb: "healthRegeneration1",
+  id: "healthRegeneration1",
   title: "Faster Healing",
-  mc: "Party Regeneration +1%",
-  Gb: 12E6,
+  desc: "Party Regeneration +1%",
+  cost: 12E6,
   Tb: 12
 }, {
-  Yb: "healthRegeneration2",
+  id: "healthRegeneration2",
   title: "Faster Healing",
-  mc: "Party Regeneration +1%",
-  Gb: 12E6,
+  desc: "Party Regeneration +1%",
+  cost: 12E6,
   Tb: 12
 }, {
-  Yb: "spiritRegeneration1",
+  id: "spiritRegeneration1",
   title: "Spirit Regeneration",
-  mc: "Party Regeneration +1%",
-  Gb: 13E6,
+  desc: "Party Regeneration +1%",
+  cost: 13E6,
   Tb: 13
 }, {
-  Yb: "spiritRegeneration2",
+  id: "spiritRegeneration2",
   title: "Spirit Regeneration",
-  mc: "Party Regeneration +1%",
-  Gb: 13E6,
+  desc: "Party Regeneration +1%",
+  cost: 13E6,
   Tb: 13
 }];
 
@@ -12916,2027 +12915,2027 @@ function Ur(a) {
   a.Dd -= a.An;
   0 > a.Dd && (a.Dd = 0)
 };
-var Vr = [{
-    k: "monsterKills100",
-    l: "Kill 100 Monsters",
+var achievments = [{
+    id: "monsterKills100",
+    desc: "Kill 100 Monsters",
     m: 1,
-    j: 100,
+    requirement: 100,
     h: 1
   }, {
-    k: "monsterKills1000",
-    l: "Kill 1,000 Monsters",
+    id: "monsterKills1000",
+    desc: "Kill 1,000 Monsters",
     m: 1,
-    j: 1E3,
+    requirement: 1E3,
     h: 21
   }, {
-    k: "monsterKills5K",
-    l: "Kill 5,000 Monsters",
+    id: "monsterKills5K",
+    desc: "Kill 5,000 Monsters",
     m: 1,
-    j: 5E3,
+    requirement: 5E3,
     h: 1
   }, {
-    k: "monsterKills10K",
-    l: "Kill 10,000 Monsters",
+    id: "monsterKills10K",
+    desc: "Kill 10,000 Monsters",
     m: 1,
-    j: 1E4,
+    requirement: 1E4,
     h: 13
   }, {
-    k: "monsterKills25K",
-    l: "Kill 25,000 Monsters",
+    id: "monsterKills25K",
+    desc: "Kill 25,000 Monsters",
     m: 1,
-    j: 25E3,
+    requirement: 25E3,
     h: 1
   }, {
-    k: "monsterKills50K",
-    l: "Kill 50,000 Monsters",
+    id: "monsterKills50K",
+    desc: "Kill 50,000 Monsters",
     m: 1,
-    j: 5E4,
+    requirement: 5E4,
     h: 14
   }, {
-    k: "monsterKills100K",
-    l: "Kill 100,000 Monsters",
+    id: "monsterKills100K",
+    desc: "Kill 100,000 Monsters",
     m: 1,
-    j: 1E5,
+    requirement: 1E5,
     h: 1
   }, {
-    k: "monsterKills250K",
-    l: "Kill 250,000 Monsters",
+    id: "monsterKills250K",
+    desc: "Kill 250,000 Monsters",
     m: 1,
-    j: 25E4,
+    requirement: 25E4,
     h: 15
   },
   {
-    k: "monsterKills500K",
-    l: "Kill 500,000 Monsters",
+    id: "monsterKills500K",
+    desc: "Kill 500,000 Monsters",
     m: 1,
-    j: 5E5,
+    requirement: 5E5,
     h: 1
   }, {
-    k: "monsterKills1M",
-    l: "Kill 1,000,000 Monsters",
+    id: "monsterKills1M",
+    desc: "Kill 1,000,000 Monsters",
     m: 1,
-    j: 1E6,
+    requirement: 1E6,
     h: 16
   }, {
-    k: "monsterKills2M",
-    l: "Kill 2,000,000 Monsters",
+    id: "monsterKills2M",
+    desc: "Kill 2,000,000 Monsters",
     m: 1,
-    j: 2E6,
+    requirement: 2E6,
     h: 2
   }, {
-    k: "scrollKills100",
-    l: "100 Scroll Kills",
+    id: "scrollKills100",
+    desc: "100 Scroll Kills",
     m: 2,
-    j: 100,
+    requirement: 100,
     h: 2
   }, {
-    k: "scrollKills500",
-    l: "500 Scroll Kills",
+    id: "scrollKills500",
+    desc: "500 Scroll Kills",
     m: 2,
-    j: 500,
+    requirement: 500,
     h: 22
   }, {
-    k: "scrollKills1000",
-    l: "1,000 Scroll Kills",
+    id: "scrollKills1000",
+    desc: "1,000 Scroll Kills",
     m: 2,
-    j: 1E3,
+    requirement: 1E3,
     h: yh
   }, {
-    k: "scrollKills2K",
-    l: "2,000 Scroll Kills",
+    id: "scrollKills2K",
+    desc: "2,000 Scroll Kills",
     m: 2,
-    j: 2E3,
+    requirement: 2E3,
     h: 9
   }, {
-    k: "scrollKills3K",
-    l: "3,000 Scroll Kills",
+    id: "scrollKills3K",
+    desc: "3,000 Scroll Kills",
     m: 2,
-    j: 3E3,
+    requirement: 3E3,
     h: 12
   }, {
-    k: "scrollKills5K",
-    l: "5,000 Scroll Kills",
+    id: "scrollKills5K",
+    desc: "5,000 Scroll Kills",
     m: 2,
-    j: 5E3,
+    requirement: 5E3,
     h: 1
   }, {
-    k: "scrollKills7K",
-    l: "7,000 Scroll Kills",
+    id: "scrollKills7K",
+    desc: "7,000 Scroll Kills",
     m: 2,
-    j: 7E3,
+    requirement: 7E3,
     h: 7
   }, {
-    k: "scrollKills10K",
-    l: "10,000 Scroll Kills",
+    id: "scrollKills10K",
+    desc: "10,000 Scroll Kills",
     m: 2,
-    j: 1E4,
+    requirement: 1E4,
     h: 2
   }, {
-    k: "scrollKills15K",
-    l: "15,000 Scroll Kills",
+    id: "scrollKills15K",
+    desc: "15,000 Scroll Kills",
     m: 2,
-    j: 15E3,
+    requirement: 15E3,
     h: 19
   }, {
-    k: "scrollKills20K",
-    l: "20,000 Scroll Kills",
+    id: "scrollKills20K",
+    desc: "20,000 Scroll Kills",
     m: 2,
-    j: 2E4,
+    requirement: 2E4,
     h: 21
   }, {
-    k: "scrollUses100",
-    l: "100 Scrolls Used",
+    id: "scrollUses100",
+    desc: "100 Scrolls Used",
     m: 3,
-    j: 100,
+    requirement: 100,
     h: 10
   }, {
-    k: "scrollUses300",
-    l: "300 Scrolls Used",
+    id: "scrollUses300",
+    desc: "300 Scrolls Used",
     m: 3,
-    j: 300,
+    requirement: 300,
     h: 18
   }, {
-    k: "scrollUses500",
-    l: "500 Scrolls Used",
+    id: "scrollUses500",
+    desc: "500 Scrolls Used",
     m: 3,
-    j: 500,
+    requirement: 500,
     h: Pd
   }, {
-    k: "scrollUses750",
-    l: "750 Scrolls Used",
+    id: "scrollUses750",
+    desc: "750 Scrolls Used",
     m: 3,
-    j: 750,
+    requirement: 750,
     h: 21
   }, {
-    k: "scrollUses1000",
-    l: "1,000 Scrolls Used",
+    id: "scrollUses1000",
+    desc: "1,000 Scrolls Used",
     m: 3,
-    j: 1E3,
+    requirement: 1E3,
     h: 13
   }, {
-    k: "scrollUses2K",
-    l: "2,000 Scrolls Used",
+    id: "scrollUses2K",
+    desc: "2,000 Scrolls Used",
     m: 3,
-    j: 2E3,
+    requirement: 2E3,
     h: 14
   }, {
-    k: "scrollUses3K",
-    l: "3,000 Scrolls Used",
+    id: "scrollUses3K",
+    desc: "3,000 Scrolls Used",
     m: 3,
-    j: 3E3,
+    requirement: 3E3,
     h: 15
   }, {
-    k: "scrollUses4K",
-    l: "4,000 Scrolls Used",
+    id: "scrollUses4K",
+    desc: "4,000 Scrolls Used",
     m: 3,
-    j: 4E3,
+    requirement: 4E3,
     h: 16
   }, {
-    k: "scrollUses5K",
-    l: "5,000 Scrolls Used",
+    id: "scrollUses5K",
+    desc: "5,000 Scrolls Used",
     m: 3,
-    j: 5E3,
+    requirement: 5E3,
     h: 17
   }, {
-    k: "scrollUses7500",
-    l: "7,500 Scrolls Used",
+    id: "scrollUses7500",
+    desc: "7,500 Scrolls Used",
     m: 3,
-    j: 7500,
+    requirement: 7500,
     h: 18
   }, {
-    k: "scrollUses15K",
-    l: "15,000 Scrolls Used",
+    id: "scrollUses15K",
+    desc: "15,000 Scrolls Used",
     m: 3,
-    j: 15E3,
+    requirement: 15E3,
     h: 21
   }, {
-    k: "scrollUses30K",
-    l: "30,000 Scrolls Used",
+    id: "scrollUses30K",
+    desc: "30,000 Scrolls Used",
     m: 3,
-    j: 3E4,
+    requirement: 3E4,
     h: 6
   }, {
-    k: "scrollUses45K",
-    l: "45,000 Scrolls Used",
+    id: "scrollUses45K",
+    desc: "45,000 Scrolls Used",
     m: 3,
-    j: 45E3,
+    requirement: 45E3,
     h: 7
   }, {
-    k: "scrollUses60K",
-    l: "60,000 Scrolls Used",
+    id: "scrollUses60K",
+    desc: "60,000 Scrolls Used",
     m: 3,
-    j: 6E4,
+    requirement: 6E4,
     h: 8
   }, {
-    k: "potionUses100",
-    l: "100 Potions Used",
+    id: "potionUses100",
+    desc: "100 Potions Used",
     m: 4,
-    j: 100,
+    requirement: 100,
     h: 8
   }, {
-    k: "potionUses200",
-    l: "200 Potions Used",
+    id: "potionUses200",
+    desc: "200 Potions Used",
     m: 4,
-    j: 200,
+    requirement: 200,
     h: 7
   }, {
-    k: "potionUses300",
-    l: "300 Potions Used",
+    id: "potionUses300",
+    desc: "300 Potions Used",
     m: 4,
-    j: 300,
+    requirement: 300,
     h: 6
   }, {
-    k: "potionUses400",
-    l: "400 Potions Used",
+    id: "potionUses400",
+    desc: "400 Potions Used",
     m: 4,
-    j: 400,
+    requirement: 400,
     h: 11
   }, {
-    k: "potionUses500",
-    l: "500 Potions Used",
+    id: "potionUses500",
+    desc: "500 Potions Used",
     m: 4,
-    j: 500,
+    requirement: 500,
     h: 10
   }, {
-    k: "potionUses750",
-    l: "750 Potions Used",
+    id: "potionUses750",
+    desc: "750 Potions Used",
     m: 4,
-    j: 750,
+    requirement: 750,
     h: 2
   }, {
-    k: "potionUses1000",
-    l: "1000 Potions Used",
+    id: "potionUses1000",
+    desc: "1000 Potions Used",
     m: 4,
-    j: 1E3,
+    requirement: 1E3,
     h: 17
   }, {
-    k: "potionUses1250",
-    l: "1250 Potions Used",
+    id: "potionUses1250",
+    desc: "1250 Potions Used",
     m: 4,
-    j: 1250,
+    requirement: 1250,
     h: 11
   }, {
-    k: "potionUses2K",
-    l: "2000 Potions Used",
+    id: "potionUses2K",
+    desc: "2000 Potions Used",
     m: 4,
-    j: 2E3,
+    requirement: 2E3,
     h: 10
   }, {
-    k: "potionUses2500",
-    l: "2500 Potions Used",
+    id: "potionUses2500",
+    desc: "2500 Potions Used",
     m: 4,
-    j: 2500,
+    requirement: 2500,
     h: 21
   }, {
-    k: "potionUses3K",
-    l: "3000 Potions Used",
+    id: "potionUses3K",
+    desc: "3000 Potions Used",
     m: 4,
-    j: 3E3,
+    requirement: 3E3,
     h: 17
   }, {
-    k: "treasureChests10",
-    l: "10 Treasure Chests Looted",
+    id: "treasureChests10",
+    desc: "10 Treasure Chests Looted",
     m: 5,
-    j: 10,
+    requirement: 10,
     h: 6
   }, {
-    k: "treasureChests25",
-    l: "25 Treasure Chests Looted",
+    id: "treasureChests25",
+    desc: "25 Treasure Chests Looted",
     m: 5,
-    j: 25,
+    requirement: 25,
     h: 17
   }, {
-    k: "treasureChests50",
-    l: "50 Treasure Chests Looted",
+    id: "treasureChests50",
+    desc: "50 Treasure Chests Looted",
     m: 5,
-    j: 50,
+    requirement: 50,
     h: 9
   }, {
-    k: "treasureChests75",
-    l: "75 Treasure Chests Looted",
+    id: "treasureChests75",
+    desc: "75 Treasure Chests Looted",
     m: 5,
-    j: 75,
+    requirement: 75,
     h: 11
   }, {
-    k: "treasureChests100",
-    l: "100 Treasure Chests Looted",
+    id: "treasureChests100",
+    desc: "100 Treasure Chests Looted",
     m: 5,
-    j: 100,
+    requirement: 100,
     h: 10
   }, {
-    k: "treasureChests125",
-    l: "125 Treasure Chests Looted",
+    id: "treasureChests125",
+    desc: "125 Treasure Chests Looted",
     m: 5,
-    j: 125,
+    requirement: 125,
     h: 18
   }, {
-    k: "treasureChests1K",
-    l: "1000 Treasure Chests Looted",
+    id: "treasureChests1K",
+    desc: "1000 Treasure Chests Looted",
     m: 5,
-    j: 1E3,
+    requirement: 1E3,
     h: 2
   }, {
-    k: "treasureChests2500",
-    l: "2500 Treasure Chests Looted",
+    id: "treasureChests2500",
+    desc: "2500 Treasure Chests Looted",
     m: 5,
-    j: 2500,
+    requirement: 2500,
     h: 9
   }, {
-    k: "treasureChests5K",
-    l: "5,000 Treasure Chests Looted",
+    id: "treasureChests5K",
+    desc: "5,000 Treasure Chests Looted",
     m: 5,
-    j: 5E3,
+    requirement: 5E3,
     h: 12
   }, {
-    k: "treasureChests10K",
-    l: "10,000 Treasure Chests Looted",
+    id: "treasureChests10K",
+    desc: "10,000 Treasure Chests Looted",
     m: 5,
-    j: 1E4,
+    requirement: 1E4,
     h: 11
   }, {
-    k: "treasureChests20K",
-    l: "20,000 Treasure Chests Looted",
+    id: "treasureChests20K",
+    desc: "20,000 Treasure Chests Looted",
     m: 5,
-    j: 2E4,
+    requirement: 2E4,
     h: Pd
   }, {
-    k: "weaponRacks10",
-    l: "10 Weapon Racks Looted",
+    id: "weaponRacks10",
+    desc: "10 Weapon Racks Looted",
     m: 6,
-    j: 10,
+    requirement: 10,
     h: 7
   }, {
-    k: "weaponRacks25",
-    l: "25 Weapon Racks Looted",
+    id: "weaponRacks25",
+    desc: "25 Weapon Racks Looted",
     m: 6,
-    j: 25,
+    requirement: 25,
     h: 13
   }, {
-    k: "weaponRacks50",
-    l: "50 Weapon Racks Looted",
+    id: "weaponRacks50",
+    desc: "50 Weapon Racks Looted",
     m: 6,
-    j: 50,
+    requirement: 50,
     h: 14
   }, {
-    k: "weaponRacks75",
-    l: "75 Weapon Racks Looted",
+    id: "weaponRacks75",
+    desc: "75 Weapon Racks Looted",
     m: 6,
-    j: 75,
+    requirement: 75,
     h: 15
   }, {
-    k: "weaponRacks100",
-    l: "100 Weapon Racks Looted",
+    id: "weaponRacks100",
+    desc: "100 Weapon Racks Looted",
     m: 6,
-    j: 100,
+    requirement: 100,
     h: 16
   }, {
-    k: "weaponRacks125",
-    l: "125 Weapon Racks Looted",
+    id: "weaponRacks125",
+    desc: "125 Weapon Racks Looted",
     m: 6,
-    j: 125,
+    requirement: 125,
     h: 17
   }, {
-    k: "weaponRacks1K",
-    l: "1,000 Weapon Racks Looted",
+    id: "weaponRacks1K",
+    desc: "1,000 Weapon Racks Looted",
     m: 6,
-    j: 1E3,
+    requirement: 1E3,
     h: 13
   }, {
-    k: "weaponRacks2500",
-    l: "2,500 Weapon Racks Looted",
+    id: "weaponRacks2500",
+    desc: "2,500 Weapon Racks Looted",
     m: 6,
-    j: 2500,
+    requirement: 2500,
     h: 14
   }, {
-    k: "weaponRacks5K",
-    l: "5,000 Weapon Racks Looted",
+    id: "weaponRacks5K",
+    desc: "5,000 Weapon Racks Looted",
     m: 6,
-    j: 5E3,
+    requirement: 5E3,
     h: 15
   }, {
-    k: "weaponRacks10K",
-    l: "10,000 Weapon Racks Looted",
+    id: "weaponRacks10K",
+    desc: "10,000 Weapon Racks Looted",
     m: 6,
-    j: 1E4,
+    requirement: 1E4,
     h: 16
   }, {
-    k: "weaponRacks20K",
-    l: "20,000 Weapon Racks Looted",
+    id: "weaponRacks20K",
+    desc: "20,000 Weapon Racks Looted",
     m: 6,
-    j: 2E4,
+    requirement: 2E4,
     h: 8
   }, {
-    k: "bookcases10",
-    l: "10 Bookcases Looted",
+    id: "bookcases10",
+    desc: "10 Bookcases Looted",
     m: 7,
-    j: 10,
+    requirement: 10,
     h: 8
   }, {
-    k: "bookcases25",
-    l: "25 Bookcases Looted",
+    id: "bookcases25",
+    desc: "25 Bookcases Looted",
     m: 7,
-    j: 25,
+    requirement: 25,
     h: 7
   }, {
-    k: "bookcases50",
-    l: "50 Bookcases Looted",
+    id: "bookcases50",
+    desc: "50 Bookcases Looted",
     m: 7,
-    j: 50,
+    requirement: 50,
     h: 6
   }, {
-    k: "bookcases75",
-    l: "75 Bookcases Looted",
+    id: "bookcases75",
+    desc: "75 Bookcases Looted",
     m: 7,
-    j: 75,
+    requirement: 75,
     h: 8
   }, {
-    k: "bookcases100",
-    l: "100 Bookcases Looted",
+    id: "bookcases100",
+    desc: "100 Bookcases Looted",
     m: 7,
-    j: 100,
+    requirement: 100,
     h: 7
   }, {
-    k: "bookcases125",
-    l: "125 Bookcases Looted",
+    id: "bookcases125",
+    desc: "125 Bookcases Looted",
     m: 7,
-    j: 125,
+    requirement: 125,
     h: 6
   }, {
-    k: "bookcases1K",
-    l: "1,000 Bookcases Looted",
+    id: "bookcases1K",
+    desc: "1,000 Bookcases Looted",
     m: 7,
-    j: 1E3,
+    requirement: 1E3,
     h: 11
   }, {
-    k: "bookcases2500",
-    l: "2,500 Bookcases Looted",
+    id: "bookcases2500",
+    desc: "2,500 Bookcases Looted",
     m: 7,
-    j: 2500,
+    requirement: 2500,
     h: yh
   },
   {
-    k: "bookcases5K",
-    l: "5,000 Bookcases Looted",
+    id: "bookcases5K",
+    desc: "5,000 Bookcases Looted",
     m: 7,
-    j: 5E3,
+    requirement: 5E3,
     h: 18
   }, {
-    k: "bookcases9K",
-    l: "9,000 Bookcases Looted",
+    id: "bookcases9K",
+    desc: "9,000 Bookcases Looted",
     m: 7,
-    j: 9E3,
+    requirement: 9E3,
     h: 22
   }, {
-    k: "itemsSold100",
-    l: "100 Items Sold",
+    id: "itemsSold100",
+    desc: "100 Items Sold",
     m: 8,
-    j: 100,
+    requirement: 100,
     h: 17
   }, {
-    k: "itemsSold500",
-    l: "500 Items Sold",
+    id: "itemsSold500",
+    desc: "500 Items Sold",
     m: 8,
-    j: 500,
+    requirement: 500,
     h: yh
   }, {
-    k: "itemsSold1000",
-    l: "1,000 Items Sold",
+    id: "itemsSold1000",
+    desc: "1,000 Items Sold",
     m: 8,
-    j: 1E3,
+    requirement: 1E3,
     h: 17
   }, {
-    k: "itemsSold2K",
-    l: "2,000 Items Sold",
+    id: "itemsSold2K",
+    desc: "2,000 Items Sold",
     m: 8,
-    j: 2E3,
+    requirement: 2E3,
     h: 9
   }, {
-    k: "itemsSold3K",
-    l: "3,000 Items Sold",
+    id: "itemsSold3K",
+    desc: "3,000 Items Sold",
     m: 8,
-    j: 3E3,
+    requirement: 3E3,
     h: 10
   }, {
-    k: "itemsSold5K",
-    l: "5,000 Items Sold",
+    id: "itemsSold5K",
+    desc: "5,000 Items Sold",
     m: 8,
-    j: 5E3,
+    requirement: 5E3,
     h: 11
   }, {
-    k: "itemsSold10K",
-    l: "10,000 Items Sold",
+    id: "itemsSold10K",
+    desc: "10,000 Items Sold",
     m: 8,
-    j: 1E4,
+    requirement: 1E4,
     h: 12
   }, {
-    k: "itemsSold15K",
-    l: "15,000 Items Sold",
+    id: "itemsSold15K",
+    desc: "15,000 Items Sold",
     m: 8,
-    j: 15E3,
+    requirement: 15E3,
     h: Ld
   }, {
-    k: "itemsSold20K",
-    l: "20,000 Items Sold",
+    id: "itemsSold20K",
+    desc: "20,000 Items Sold",
     m: 8,
-    j: 2E4,
+    requirement: 2E4,
     h: 1
   }, {
-    k: "itemsSold40K",
-    l: "40,000 Items Sold",
+    id: "itemsSold40K",
+    desc: "40,000 Items Sold",
     m: 8,
-    j: 4E4,
+    requirement: 4E4,
     h: 16
   }, {
-    k: "itemsSold60K",
-    l: "60,000 Items Sold",
+    id: "itemsSold60K",
+    desc: "60,000 Items Sold",
     m: 8,
-    j: 6E4,
+    requirement: 6E4,
     h: 8
   }, {
-    k: "itemsSold80K",
-    l: "80,000 Items Sold",
+    id: "itemsSold80K",
+    desc: "80,000 Items Sold",
     m: 8,
-    j: 8E4,
+    requirement: 8E4,
     h: 21
   }, {
-    k: "itemsSold100K",
-    l: "100,000 Items Sold",
+    id: "itemsSold100K",
+    desc: "100,000 Items Sold",
     m: 8,
-    j: 1E5,
+    requirement: 1E5,
     h: 17
   }, {
-    k: "farmsPurchased5",
-    l: "5 Farms Purchased",
+    id: "farmsPurchased5",
+    desc: "5 Farms Purchased",
     m: 9,
-    j: 5,
+    requirement: 5,
     h: 2
   }, {
-    k: "farmsPurchased15",
-    l: "15 Farms Purchased",
+    id: "farmsPurchased15",
+    desc: "15 Farms Purchased",
     m: 9,
-    j: 15,
+    requirement: 15,
     h: 9
   }, {
-    k: "farmsPurchased25",
-    l: "25 Farms Purchased",
+    id: "farmsPurchased25",
+    desc: "25 Farms Purchased",
     m: 9,
-    j: 25,
+    requirement: 25,
     h: 12
   }, {
-    k: "farmsPurchased50",
-    l: "50 Farms Purchased",
+    id: "farmsPurchased50",
+    desc: "50 Farms Purchased",
     m: 9,
-    j: 50,
+    requirement: 50,
     h: 10
   }, {
-    k: "farmsPurchased75",
-    l: "75 Farms Purchased",
+    id: "farmsPurchased75",
+    desc: "75 Farms Purchased",
     m: 9,
-    j: 75,
+    requirement: 75,
     h: 11
   }, {
-    k: "farmsPurchased100",
-    l: "100 Farms Purchased",
+    id: "farmsPurchased100",
+    desc: "100 Farms Purchased",
     m: 9,
-    j: 100,
+    requirement: 100,
     h: 13
   }, {
-    k: "farmsPurchased150",
-    l: "150 Farms Purchased",
+    id: "farmsPurchased150",
+    desc: "150 Farms Purchased",
     m: 9,
-    j: 150,
+    requirement: 150,
     h: 14
   }, {
-    k: "farmsPurchased200",
-    l: "200 Farms Purchased",
+    id: "farmsPurchased200",
+    desc: "200 Farms Purchased",
     m: 9,
-    j: 200,
+    requirement: 200,
     h: 15
   }, {
-    k: "farmsPurchased250",
-    l: "250 Farms Purchased",
+    id: "farmsPurchased250",
+    desc: "250 Farms Purchased",
     m: 9,
-    j: 250,
+    requirement: 250,
     h: 16
   }, {
-    k: "farmsPurchased300",
-    l: "300 Farms Purchased",
+    id: "farmsPurchased300",
+    desc: "300 Farms Purchased",
     m: 9,
-    j: 300,
+    requirement: 300,
     h: Pd
   }, {
-    k: "farmsPurchased500",
-    l: "500 Farms Purchased",
+    id: "farmsPurchased500",
+    desc: "500 Farms Purchased",
     m: 9,
-    j: 500,
+    requirement: 500,
     h: 2
   }, {
-    k: "farmsPurchased600",
-    l: "600 Farms Purchased",
+    id: "farmsPurchased600",
+    desc: "600 Farms Purchased",
     m: 9,
-    j: 600,
+    requirement: 600,
     h: 22
   }, {
-    k: "farmsPurchased700",
-    l: "700 Farms Purchased",
+    id: "farmsPurchased700",
+    desc: "700 Farms Purchased",
     m: 9,
-    j: 700,
+    requirement: 700,
     h: 21
   }, {
-    k: "dungeonsCleared10",
-    l: "10 Dungeons Cleared",
+    id: "dungeonsCleared10",
+    desc: "10 Dungeons Cleared",
     m: 10,
-    j: 10,
+    requirement: 10,
     h: Pd
   }, {
-    k: "dungeonsCleared25",
-    l: "25 Dungeons Cleared",
+    id: "dungeonsCleared25",
+    desc: "25 Dungeons Cleared",
     m: 10,
-    j: 25,
+    requirement: 25,
     h: 19
   }, {
-    k: "dungeonsCleared50",
-    l: "50 Dungeons Cleared",
+    id: "dungeonsCleared50",
+    desc: "50 Dungeons Cleared",
     m: 10,
-    j: 50,
+    requirement: 50,
     h: Ld
   }, {
-    k: "dungeonsCleared100",
-    l: "100 Dungeons Cleared",
+    id: "dungeonsCleared100",
+    desc: "100 Dungeons Cleared",
     m: 10,
-    j: 100,
+    requirement: 100,
     h: 17
   }, {
-    k: "dungeonsCleared200",
-    l: "200 Dungeons Cleared",
+    id: "dungeonsCleared200",
+    desc: "200 Dungeons Cleared",
     m: 10,
-    j: 200,
+    requirement: 200,
     h: 8
   }, {
-    k: "dungeonsCleared300",
-    l: "300 Dungeons Cleared",
+    id: "dungeonsCleared300",
+    desc: "300 Dungeons Cleared",
     m: 10,
-    j: 300,
+    requirement: 300,
     h: 7
   }, {
-    k: "dungeonsCleared400",
-    l: "400 Dungeons Cleared",
+    id: "dungeonsCleared400",
+    desc: "400 Dungeons Cleared",
     m: 10,
-    j: 400,
+    requirement: 400,
     h: 6
   }, {
-    k: "dungeonsCleared500",
-    l: "500 Dungeons Cleared",
+    id: "dungeonsCleared500",
+    desc: "500 Dungeons Cleared",
     m: 10,
-    j: 500,
+    requirement: 500,
     h: yh
   }, {
-    k: "dungeonsCleared750",
-    l: "750 Dungeons Cleared",
+    id: "dungeonsCleared750",
+    desc: "750 Dungeons Cleared",
     m: 10,
-    j: 750,
+    requirement: 750,
     h: Pd
   }, {
-    k: "dungeonsCleared1K",
-    l: "1,000 Dungeons Cleared",
+    id: "dungeonsCleared1K",
+    desc: "1,000 Dungeons Cleared",
     m: 10,
-    j: 1E3,
+    requirement: 1E3,
     h: 21
   }, {
-    k: "dungeonsCleared1500",
-    l: "1,500 Dungeons Cleared",
+    id: "dungeonsCleared1500",
+    desc: "1,500 Dungeons Cleared",
     m: 10,
-    j: 1500,
+    requirement: 1500,
     h: Ld
   }, {
-    k: "dungeonsCleared2K",
-    l: "2,000 Dungeons Cleared",
+    id: "dungeonsCleared2K",
+    desc: "2,000 Dungeons Cleared",
     m: 10,
-    j: 2E3,
+    requirement: 2E3,
     h: 17
   }, {
-    k: "dungeonsCleared3K",
-    l: "3,000 Dungeons Cleared",
+    id: "dungeonsCleared3K",
+    desc: "3,000 Dungeons Cleared",
     m: 10,
-    j: 3E3,
+    requirement: 3E3,
     h: 21
   }, {
-    k: "dungeonsCleared4K",
-    l: "4,000 Dungeons Cleared",
+    id: "dungeonsCleared4K",
+    desc: "4,000 Dungeons Cleared",
     m: 10,
-    j: 4E3,
+    requirement: 4E3,
     h: 22
   }, {
-    k: "castlesConquered5",
-    l: "5 Castles Conquered",
+    id: "castlesConquered5",
+    desc: "5 Castles Conquered",
     m: 11,
-    j: 5,
+    requirement: 5,
     h: 19
   }, {
-    k: "castlesConquered30",
-    l: "30 Castles Conquered",
+    id: "castlesConquered30",
+    desc: "30 Castles Conquered",
     m: 11,
-    j: 30,
+    requirement: 30,
     h: Pd
   }, {
-    k: "castlesConquered60",
-    l: "60 Castles Conquered",
+    id: "castlesConquered60",
+    desc: "60 Castles Conquered",
     m: 11,
-    j: 60,
+    requirement: 60,
     h: 2
   }, {
-    k: "castlesConquered90",
-    l: "90 Castles Conquered",
+    id: "castlesConquered90",
+    desc: "90 Castles Conquered",
     m: 11,
-    j: 90,
+    requirement: 90,
     h: 9
   }, {
-    k: "castlesConquered120",
-    l: "120 Castles Conquered",
+    id: "castlesConquered120",
+    desc: "120 Castles Conquered",
     m: 11,
-    j: 120,
+    requirement: 120,
     h: 11
   }, {
-    k: "castlesConquered150",
-    l: "150 Castles Conquered",
+    id: "castlesConquered150",
+    desc: "150 Castles Conquered",
     m: 11,
-    j: 150,
+    requirement: 150,
     h: 10
   }, {
-    k: "castlesConquered180",
-    l: "180 Castles Conquered",
+    id: "castlesConquered180",
+    desc: "180 Castles Conquered",
     m: 11,
-    j: 180,
+    requirement: 180,
     h: 12
   }, {
-    k: "castlesConquered210",
-    l: "210 Castles Conquered",
+    id: "castlesConquered210",
+    desc: "210 Castles Conquered",
     m: 11,
-    j: 210,
+    requirement: 210,
     h: 2
   },
   {
-    k: "castlesConquered240",
-    l: "240 Castles Conquered",
+    id: "castlesConquered240",
+    desc: "240 Castles Conquered",
     m: 11,
-    j: 240,
+    requirement: 240,
     h: 8
   }, {
-    k: "castlesConquered270",
-    l: "270 Castles Conquered",
+    id: "castlesConquered270",
+    desc: "270 Castles Conquered",
     m: 11,
-    j: 270,
+    requirement: 270,
     h: yh
   }, {
-    k: "castlesConquered300",
-    l: "300 Castles Conquered",
+    id: "castlesConquered300",
+    desc: "300 Castles Conquered",
     m: 11,
-    j: 300,
+    requirement: 300,
     h: 19
   }, {
-    k: "spellsCast1000",
-    l: "1,000 Spells Cast",
+    id: "spellsCast1000",
+    desc: "1,000 Spells Cast",
     m: 12,
-    j: 1E3,
+    requirement: 1E3,
     h: Ld
   }, {
-    k: "spellsCast5K",
-    l: "5,000 Spells Cast",
+    id: "spellsCast5K",
+    desc: "5,000 Spells Cast",
     m: 12,
-    j: 5E3,
+    requirement: 5E3,
     h: Pd
   }, {
-    k: "spellsCast25K",
-    l: "25,000 Spells Cast",
+    id: "spellsCast25K",
+    desc: "25,000 Spells Cast",
     m: 12,
-    j: 25E3,
+    requirement: 25E3,
     h: 19
   }, {
-    k: "spellsCast50K",
-    l: "50,000 Spells Cast",
+    id: "spellsCast50K",
+    desc: "50,000 Spells Cast",
     m: 12,
-    j: 5E4,
+    requirement: 5E4,
     h: 16
   }, {
-    k: "spellsCast100K",
-    l: "100,000 Spells Cast",
+    id: "spellsCast100K",
+    desc: "100,000 Spells Cast",
     m: 12,
-    j: 1E5,
+    requirement: 1E5,
     h: 15
   }, {
-    k: "spellsCast150K",
-    l: "150,000 Spells Cast",
+    id: "spellsCast150K",
+    desc: "150,000 Spells Cast",
     m: 12,
-    j: 15E4,
+    requirement: 15E4,
     h: 14
   }, {
-    k: "spellsCast200K",
-    l: "200,000 Spells Cast",
+    id: "spellsCast200K",
+    desc: "200,000 Spells Cast",
     m: 12,
-    j: 2E5,
+    requirement: 2E5,
     h: 13
   }, {
-    k: "spellsCast300K",
-    l: "300,000 Spells Cast",
+    id: "spellsCast300K",
+    desc: "300,000 Spells Cast",
     m: 12,
-    j: 3E5,
+    requirement: 3E5,
     h: 9
   }, {
-    k: "spellsCast500K",
-    l: "500,000 Spells Cast",
+    id: "spellsCast500K",
+    desc: "500,000 Spells Cast",
     m: 12,
-    j: 5E5,
+    requirement: 5E5,
     h: 12
   }, {
-    k: "spellsCast700K",
-    l: "700,000 Spells Cast",
+    id: "spellsCast700K",
+    desc: "700,000 Spells Cast",
     m: 12,
-    j: 7E5,
+    requirement: 7E5,
     h: 11
   }, {
-    k: "spellsCast900K",
-    l: "900,000 Spells Cast",
+    id: "spellsCast900K",
+    desc: "900,000 Spells Cast",
     m: 12,
-    j: 9E5,
+    requirement: 9E5,
     h: 10
   }, {
-    k: "spellsCast1.1M",
-    l: "1,100,000 Spells Cast",
+    id: "spellsCast1.1M",
+    desc: "1,100,000 Spells Cast",
     m: 12,
-    j: 11E5,
+    requirement: 11E5,
     h: 21
   }, {
-    k: "meleeAttacks1000",
-    l: "1,000 Melee Attacks",
+    id: "meleeAttacks1000",
+    desc: "1,000 Melee Attacks",
     m: 13,
-    j: 1E3,
+    requirement: 1E3,
     h: 21
   }, {
-    k: "meleeAttacks5K",
-    l: "5,000 Melee Attacks",
+    id: "meleeAttacks5K",
+    desc: "5,000 Melee Attacks",
     m: 13,
-    j: 5E3,
+    requirement: 5E3,
     h: 9
   }, {
-    k: "meleeAttacks25K",
-    l: "25,000 Melee Attacks",
+    id: "meleeAttacks25K",
+    desc: "25,000 Melee Attacks",
     m: 13,
-    j: 25E3,
+    requirement: 25E3,
     h: 12
   }, {
-    k: "meleeAttacks50K",
-    l: "50,000 Melee Attacks",
+    id: "meleeAttacks50K",
+    desc: "50,000 Melee Attacks",
     m: 13,
-    j: 5E4,
+    requirement: 5E4,
     h: 11
   }, {
-    k: "meleeAttacks100K",
-    l: "100,000 Melee Attacks",
+    id: "meleeAttacks100K",
+    desc: "100,000 Melee Attacks",
     m: 13,
-    j: 1E5,
+    requirement: 1E5,
     h: 10
   }, {
-    k: "meleeAttacks150K",
-    l: "150,000 Melee Attacks",
+    id: "meleeAttacks150K",
+    desc: "150,000 Melee Attacks",
     m: 13,
-    j: 15E4,
+    requirement: 15E4,
     h: Ld
   }, {
-    k: "meleeAttacks200K",
-    l: "200,000 Melee Attacks",
+    id: "meleeAttacks200K",
+    desc: "200,000 Melee Attacks",
     m: 13,
-    j: 2E5,
+    requirement: 2E5,
     h: 2
   }, {
-    k: "meleeAttacks400K",
-    l: "400,000 Melee Attacks",
+    id: "meleeAttacks400K",
+    desc: "400,000 Melee Attacks",
     m: 13,
-    j: 4E5,
+    requirement: 4E5,
     h: 22
   }, {
-    k: "meleeAttacks700K",
-    l: "700,000 Melee Attacks",
+    id: "meleeAttacks700K",
+    desc: "700,000 Melee Attacks",
     m: 13,
-    j: 7E5,
+    requirement: 7E5,
     h: 17
   }, {
-    k: "meleeAttacks1M",
-    l: "1,000,000 Melee Attacks",
+    id: "meleeAttacks1M",
+    desc: "1,000,000 Melee Attacks",
     m: 13,
-    j: 1E6,
+    requirement: 1E6,
     h: 19
   }, {
-    k: "meleeAttacks1.5M",
-    l: "1,500,000 Melee Attacks",
+    id: "meleeAttacks1.5M",
+    desc: "1,500,000 Melee Attacks",
     m: 13,
-    j: 15E5,
+    requirement: 15E5,
     h: 9
   }, {
-    k: "meleeAttacks2M",
-    l: "2,000,000 Melee Attacks",
+    id: "meleeAttacks2M",
+    desc: "2,000,000 Melee Attacks",
     m: 13,
-    j: 2E6,
+    requirement: 2E6,
     h: 11
   }, {
-    k: "meleeAttacks3M",
-    l: "3,000,000 Melee Attacks",
+    id: "meleeAttacks3M",
+    desc: "3,000,000 Melee Attacks",
     m: 13,
-    j: 3E6,
+    requirement: 3E6,
     h: 10
   }, {
-    k: "rangedAttacks1000",
-    l: "1,000 Ranged Attacks",
+    id: "rangedAttacks1000",
+    desc: "1,000 Ranged Attacks",
     m: 14,
-    j: 1E3,
+    requirement: 1E3,
     h: Pd
   }, {
-    k: "rangedAttacks5K",
-    l: "5,000 Ranged Attacks",
+    id: "rangedAttacks5K",
+    desc: "5,000 Ranged Attacks",
     m: 14,
-    j: 5E3,
+    requirement: 5E3,
     h: 9
   }, {
-    k: "rangedAttacks25K",
-    l: "25,000 Ranged Attacks",
+    id: "rangedAttacks25K",
+    desc: "25,000 Ranged Attacks",
     m: 14,
-    j: 25E3,
+    requirement: 25E3,
     h: 11
   }, {
-    k: "rangedAttacks50K",
-    l: "50,000 Ranged Attacks",
+    id: "rangedAttacks50K",
+    desc: "50,000 Ranged Attacks",
     m: 14,
-    j: 5E4,
+    requirement: 5E4,
     h: 10
   }, {
-    k: "rangedAttacks100K",
-    l: "100,000 Ranged Attacks",
+    id: "rangedAttacks100K",
+    desc: "100,000 Ranged Attacks",
     m: 14,
-    j: 1E5,
+    requirement: 1E5,
     h: 12
   }, {
-    k: "rangedAttacks150K",
-    l: "150,000 Ranged Attacks",
+    id: "rangedAttacks150K",
+    desc: "150,000 Ranged Attacks",
     m: 14,
-    j: 15E4,
+    requirement: 15E4,
     h: Ld
   }, {
-    k: "rangedAttacks200K",
-    l: "200,000 Ranged Attacks",
+    id: "rangedAttacks200K",
+    desc: "200,000 Ranged Attacks",
     m: 14,
-    j: 2E5,
+    requirement: 2E5,
     h: 22
   }, {
-    k: "rangedAttacks300K",
-    l: "300,000 Ranged Attacks",
+    id: "rangedAttacks300K",
+    desc: "300,000 Ranged Attacks",
     m: 14,
-    j: 3E5,
+    requirement: 3E5,
     h: 17
   }, {
-    k: "rangedAttacks400K",
-    l: "400,000 Ranged Attacks",
+    id: "rangedAttacks400K",
+    desc: "400,000 Ranged Attacks",
     m: 14,
-    j: 4E5,
+    requirement: 4E5,
     h: 19
   }, {
-    k: "rangedAttacks500K",
-    l: "500,000 Ranged Attacks",
+    id: "rangedAttacks500K",
+    desc: "500,000 Ranged Attacks",
     m: 14,
-    j: 5E5,
+    requirement: 5E5,
     h: 10
   }, {
-    k: "rangedAttacks700K",
-    l: "700,000 Ranged Attacks",
+    id: "rangedAttacks700K",
+    desc: "700,000 Ranged Attacks",
     m: 14,
-    j: 7E5,
+    requirement: 7E5,
     h: 11
   }, {
-    k: "rangedAttacks900K",
-    l: "900,000 Ranged Attacks",
+    id: "rangedAttacks900K",
+    desc: "900,000 Ranged Attacks",
     m: 14,
-    j: 9E5,
+    requirement: 9E5,
     h: 9
   }, {
-    k: "rangedAttacks1.2M",
-    l: "1,200,000 Ranged Attacks",
+    id: "rangedAttacks1.2M",
+    desc: "1,200,000 Ranged Attacks",
     m: 14,
-    j: 12E5,
+    requirement: 12E5,
     h: 21
   }, {
-    k: "minionsSummoned50",
-    l: "50 Minions Summoned",
+    id: "minionsSummoned50",
+    desc: "50 Minions Summoned",
     m: 15,
-    j: 50,
+    requirement: 50,
     h: Pd
   }, {
-    k: "minionsSummoned100",
-    l: "100 Minions Summoned",
+    id: "minionsSummoned100",
+    desc: "100 Minions Summoned",
     m: 15,
-    j: 100,
+    requirement: 100,
     h: Ld
   }, {
-    k: "minionsSummoned250",
-    l: "250 Minions Summoned",
+    id: "minionsSummoned250",
+    desc: "250 Minions Summoned",
     m: 15,
-    j: 250,
+    requirement: 250,
     h: 19
   }, {
-    k: "minionsSummoned500",
-    l: "500 Minions Summoned",
+    id: "minionsSummoned500",
+    desc: "500 Minions Summoned",
     m: 15,
-    j: 500,
+    requirement: 500,
     h: 7
   }, {
-    k: "minionsSummoned750",
-    l: "750 Minions Summoned",
+    id: "minionsSummoned750",
+    desc: "750 Minions Summoned",
     m: 15,
-    j: 750,
+    requirement: 750,
     h: 8
   }, {
-    k: "minionsSummoned1000",
-    l: "1,000 Minions Summoned",
+    id: "minionsSummoned1000",
+    desc: "1,000 Minions Summoned",
     m: 15,
-    j: 1E3,
+    requirement: 1E3,
     h: 6
   }, {
-    k: "minionsSummoned1500",
-    l: "1,500 Minions Summoned",
+    id: "minionsSummoned1500",
+    desc: "1,500 Minions Summoned",
     m: 15,
-    j: 1500,
+    requirement: 1500,
     h: 22
   }, {
-    k: "minionsSummoned2K",
-    l: "2,000 Minions Summoned",
+    id: "minionsSummoned2K",
+    desc: "2,000 Minions Summoned",
     m: 15,
-    j: 2E3,
+    requirement: 2E3,
     h: 9
   }, {
-    k: "minionsSummoned3K",
-    l: "3,000 Minions Summoned",
+    id: "minionsSummoned3K",
+    desc: "3,000 Minions Summoned",
     m: 15,
-    j: 3E3,
+    requirement: 3E3,
     h: 11
   }, {
-    k: "minionsSummoned5K",
-    l: "5,000 Minions Summoned",
+    id: "minionsSummoned5K",
+    desc: "5,000 Minions Summoned",
     m: 15,
-    j: 5E3,
+    requirement: 5E3,
     h: 10
   }, {
-    k: "minionsSummoned30K",
-    l: "30,000 Minions Summoned",
+    id: "minionsSummoned30K",
+    desc: "30,000 Minions Summoned",
     m: 15,
-    j: 3E4,
+    requirement: 3E4,
     h: 17
   }, {
-    k: "minionsSummoned50K",
-    l: "50,000 Minions Summoned",
+    id: "minionsSummoned50K",
+    desc: "50,000 Minions Summoned",
     m: 15,
-    j: 5E4,
+    requirement: 5E4,
     h: 14
   }, {
-    k: "minionsSummoned75K",
-    l: "75,000 Minions Summoned",
+    id: "minionsSummoned75K",
+    desc: "75,000 Minions Summoned",
     m: 15,
-    j: 75E3,
+    requirement: 75E3,
     h: 15
   }, {
-    k: "minionsSummoned100K",
-    l: "100,000 Minions Summoned",
+    id: "minionsSummoned100K",
+    desc: "100,000 Minions Summoned",
     m: 15,
-    j: 1E5,
+    requirement: 1E5,
     h: 13
   }, {
-    k: "minionsSummoned125K",
-    l: "125,000 Minions Summoned",
+    id: "minionsSummoned125K",
+    desc: "125,000 Minions Summoned",
     m: 15,
-    j: 125E3,
+    requirement: 125E3,
     h: 16
   }, {
-    k: "minionsSummoned150K",
-    l: "150,000 Minions Summoned",
+    id: "minionsSummoned150K",
+    desc: "150,000 Minions Summoned",
     m: 15,
-    j: 15E4,
+    requirement: 15E4,
     h: 21
   }, {
-    k: "minionsSummoned200K",
-    l: "200,000 Minions Summoned",
+    id: "minionsSummoned200K",
+    desc: "200,000 Minions Summoned",
     m: 15,
-    j: 2E5,
+    requirement: 2E5,
     h: yh
   }, {
-    k: "minionKills100",
-    l: "100 Minion Kills",
+    id: "minionKills100",
+    desc: "100 Minion Kills",
     m: 28,
-    j: 100,
+    requirement: 100,
     h: 2
   }, {
-    k: "minionKills1K",
-    l: "1,000 Minion Kills",
+    id: "minionKills1K",
+    desc: "1,000 Minion Kills",
     m: 28,
-    j: 1E3,
+    requirement: 1E3,
     h: 19
   }, {
-    k: "minionKills5K",
-    l: "5,000 Minion Kills",
+    id: "minionKills5K",
+    desc: "5,000 Minion Kills",
     m: 28,
-    j: 5E3,
+    requirement: 5E3,
     h: 17
   }, {
-    k: "minionKills10K",
-    l: "10,000 Minion Kills",
+    id: "minionKills10K",
+    desc: "10,000 Minion Kills",
     m: 28,
-    j: 1E4,
+    requirement: 1E4,
     h: 18
   }, {
-    k: "minionKills25K",
-    l: "25,000 Minion Kills",
+    id: "minionKills25K",
+    desc: "25,000 Minion Kills",
     m: 28,
-    j: 25E3,
+    requirement: 25E3,
     h: 21
   }, {
-    k: "minionKills50K",
-    l: "50,000 Minion Kills",
+    id: "minionKills50K",
+    desc: "50,000 Minion Kills",
     m: 28,
-    j: 5E4,
+    requirement: 5E4,
     h: 22
   }, {
-    k: "minionKills100K",
-    l: "100,000 Minion Kills",
+    id: "minionKills100K",
+    desc: "100,000 Minion Kills",
     m: 28,
-    j: 1E5,
+    requirement: 1E5,
     h: yh
   }, {
-    k: "minionKills250K",
-    l: "250,000 Minion Kills",
+    id: "minionKills250K",
+    desc: "250,000 Minion Kills",
     m: 28,
-    j: 25E4,
+    requirement: 25E4,
     h: 11
   }, {
-    k: "minionKills500K",
-    l: "500,000 Minion Kills",
+    id: "minionKills500K",
+    desc: "500,000 Minion Kills",
     m: 28,
-    j: 5E5,
+    requirement: 5E5,
     h: 18
   }, {
-    k: "minionKills750K",
-    l: "750,000 Minion Kills",
+    id: "minionKills750K",
+    desc: "750,000 Minion Kills",
     m: 28,
-    j: 75E4,
+    requirement: 75E4,
     h: 8
   }, {
-    k: "minionKills1M",
-    l: "1,000,000 Minion Kills",
+    id: "minionKills1M",
+    desc: "1,000,000 Minion Kills",
     m: 28,
-    j: 1E6,
+    requirement: 1E6,
     h: 22
   }, {
-    k: "characterLevel15",
-    l: "Character Level 15",
+    id: "characterLevel15",
+    desc: "Character Level 15",
     m: 16,
-    j: 15,
+    requirement: 15,
     h: 13
   }, {
-    k: "characterLevel30",
-    l: "Character Level 30",
+    id: "characterLevel30",
+    desc: "Character Level 30",
     m: 16,
-    j: 30,
+    requirement: 30,
     h: 14
   }, {
-    k: "characterLevel45",
-    l: "Character Level 45",
+    id: "characterLevel45",
+    desc: "Character Level 45",
     m: 16,
-    j: 45,
+    requirement: 45,
     h: 15
   }, {
-    k: "characterLevel60",
-    l: "Character Level 60",
+    id: "characterLevel60",
+    desc: "Character Level 60",
     m: 16,
-    j: 60,
+    requirement: 60,
     h: 16
   }, {
-    k: "characterLevel75",
-    l: "Character Level 75",
+    id: "characterLevel75",
+    desc: "Character Level 75",
     m: 16,
-    j: 75,
+    requirement: 75,
     h: 17
   }, {
-    k: "characterLevel90",
-    l: "Character Level 90",
+    id: "characterLevel90",
+    desc: "Character Level 90",
     m: 16,
-    j: 90,
+    requirement: 90,
     h: 12
   }, {
-    k: "characterLevel105",
-    l: "Character Level 105",
+    id: "characterLevel105",
+    desc: "Character Level 105",
     m: 16,
-    j: 105,
+    requirement: 105,
     h: 9
   }, {
-    k: "characterLevel120",
-    l: "Character Level 120",
+    id: "characterLevel120",
+    desc: "Character Level 120",
     m: 16,
-    j: 120,
+    requirement: 120,
     h: 10
   }, {
-    k: "characterLevel135",
-    l: "Character Level 135",
+    id: "characterLevel135",
+    desc: "Character Level 135",
     m: 16,
-    j: 135,
+    requirement: 135,
     h: 11
   }, {
-    k: "doorsOpened500",
-    l: "500 Doors Opened",
+    id: "doorsOpened500",
+    desc: "500 Doors Opened",
     m: 17,
-    j: 500,
+    requirement: 500,
     h: yh
   }, {
-    k: "doorsOpened1K",
-    l: "1,000 Doors Opened",
+    id: "doorsOpened1K",
+    desc: "1,000 Doors Opened",
     m: 17,
-    j: 1E3,
+    requirement: 1E3,
     h: 2
   }, {
-    k: "doorsOpened2K",
-    l: "2,000 Doors Opened",
+    id: "doorsOpened2K",
+    desc: "2,000 Doors Opened",
     m: 17,
-    j: 2E3,
+    requirement: 2E3,
     h: 17
   }, {
-    k: "doorsOpened3K",
-    l: "3,000 Doors Opened",
+    id: "doorsOpened3K",
+    desc: "3,000 Doors Opened",
     m: 17,
-    j: 3E3,
+    requirement: 3E3,
     h: 1
   }, {
-    k: "doorsOpened4K",
-    l: "4,000 Doors Opened",
+    id: "doorsOpened4K",
+    desc: "4,000 Doors Opened",
     m: 17,
-    j: 4E3,
+    requirement: 4E3,
     h: 8
   }, {
-    k: "doorsOpened5K",
-    l: "5,000 Doors Opened",
+    id: "doorsOpened5K",
+    desc: "5,000 Doors Opened",
     m: 17,
-    j: 5E3,
+    requirement: 5E3,
     h: 7
   }, {
-    k: "doorsOpened7500",
-    l: "7,500 Doors Opened",
+    id: "doorsOpened7500",
+    desc: "7,500 Doors Opened",
     m: 17,
-    j: 7500,
+    requirement: 7500,
     h: 6
   }, {
-    k: "doorsOpened10K",
-    l: "10,000 Doors Opened",
+    id: "doorsOpened10K",
+    desc: "10,000 Doors Opened",
     m: 17,
-    j: 1E4,
+    requirement: 1E4,
     h: 13
   }, {
-    k: "doorsOpened15K",
-    l: "15,000 Doors Opened",
+    id: "doorsOpened15K",
+    desc: "15,000 Doors Opened",
     m: 17,
-    j: 15E3,
+    requirement: 15E3,
     h: 14
   }, {
-    k: "doorsOpened20K",
-    l: "20,000 Doors Opened",
+    id: "doorsOpened20K",
+    desc: "20,000 Doors Opened",
     m: 17,
-    j: 2E4,
+    requirement: 2E4,
     h: 15
   }, {
-    k: "doorsOpened30K",
-    l: "30,000 Doors Opened",
+    id: "doorsOpened30K",
+    desc: "30,000 Doors Opened",
     m: 17,
-    j: 3E4,
+    requirement: 3E4,
     h: 16
   }, {
-    k: "doorsOpened40K",
-    l: "40,000 Doors Opened",
+    id: "doorsOpened40K",
+    desc: "40,000 Doors Opened",
     m: 17,
-    j: 4E4,
+    requirement: 4E4,
     h: 1
   }, {
-    k: "doorsOpened50K",
-    l: "50,000 Doors Opened",
+    id: "doorsOpened50K",
+    desc: "50,000 Doors Opened",
     m: 17,
-    j: 5E4,
+    requirement: 5E4,
     h: 2
   }, {
-    k: "doorsOpened75K",
-    l: "75,000 Doors Opened",
+    id: "doorsOpened75K",
+    desc: "75,000 Doors Opened",
     m: 17,
-    j: 75E3,
+    requirement: 75E3,
     h: 21
   }, {
-    k: "doorsOpened100K",
-    l: "100,000 Doors Opened",
+    id: "doorsOpened100K",
+    desc: "100,000 Doors Opened",
     m: 17,
-    j: 1E5,
+    requirement: 1E5,
     h: 22
   }, {
-    k: "doorsOpened125K",
-    l: "125,000 Doors Opened",
+    id: "doorsOpened125K",
+    desc: "125,000 Doors Opened",
     m: 17,
-    j: 125E3,
+    requirement: 125E3,
     h: 16
   }, {
-    k: "doorsOpened150K",
-    l: "150,000 Doors Opened",
+    id: "doorsOpened150K",
+    desc: "150,000 Doors Opened",
     m: 17,
-    j: 15E4,
+    requirement: 15E4,
     h: 15
   }, {
-    k: "doorsOpened175K",
-    l: "175,000 Doors Opened",
+    id: "doorsOpened175K",
+    desc: "175,000 Doors Opened",
     m: 17,
-    j: 175E3,
+    requirement: 175E3,
     h: 14
   }, {
-    k: "itemsFound500",
-    l: "500 Items Found",
+    id: "itemsFound500",
+    desc: "500 Items Found",
     m: 18,
-    j: 500,
+    requirement: 500,
     h: 12
   }, {
-    k: "itemsFound1000",
-    l: "1,000 Items Found",
+    id: "itemsFound1000",
+    desc: "1,000 Items Found",
     m: 18,
-    j: 1E3,
+    requirement: 1E3,
     h: 9
   }, {
-    k: "itemsFound5K",
-    l: "5,000 Items Found",
+    id: "itemsFound5K",
+    desc: "5,000 Items Found",
     m: 18,
-    j: 5E3,
+    requirement: 5E3,
     h: 11
   }, {
-    k: "itemsFound10K",
-    l: "10,000 Items Found",
+    id: "itemsFound10K",
+    desc: "10,000 Items Found",
     m: 18,
-    j: 1E4,
+    requirement: 1E4,
     h: 10
   }, {
-    k: "itemsFound25K",
-    l: "25,000 Items Found",
+    id: "itemsFound25K",
+    desc: "25,000 Items Found",
     m: 18,
-    j: 25E3,
+    requirement: 25E3,
     h: Ld
   }, {
-    k: "itemsFound50K",
-    l: "50,000 Items Found",
+    id: "itemsFound50K",
+    desc: "50,000 Items Found",
     m: 18,
-    j: 5E4,
+    requirement: 5E4,
     h: Pd
   }, {
-    k: "itemsFound100K",
-    l: "100,000 Items Found",
+    id: "itemsFound100K",
+    desc: "100,000 Items Found",
     m: 18,
-    j: 1E5,
+    requirement: 1E5,
     h: 19
   }, {
-    k: "itemsFound200K",
-    l: "200,000 Items Found",
+    id: "itemsFound200K",
+    desc: "200,000 Items Found",
     m: 18,
-    j: 2E5,
+    requirement: 2E5,
     h: 1
   }, {
-    k: "itemsFound300K",
-    l: "300,000 Items Found",
+    id: "itemsFound300K",
+    desc: "300,000 Items Found",
     m: 18,
-    j: 3E5,
+    requirement: 3E5,
     h: 2
   }, {
-    k: "itemsFound400K",
-    l: "400,000 Items Found",
+    id: "itemsFound400K",
+    desc: "400,000 Items Found",
     m: 18,
-    j: 4E5,
+    requirement: 4E5,
     h: 9
   }, {
-    k: "itemsFound500K",
-    l: "500,000 Items Found",
+    id: "itemsFound500K",
+    desc: "500,000 Items Found",
     m: 18,
-    j: 5E5,
+    requirement: 5E5,
     h: 12
   }, {
-    k: "itemsFound600K",
-    l: "600,000 Items Found",
+    id: "itemsFound600K",
+    desc: "600,000 Items Found",
     m: 18,
-    j: 6E5,
+    requirement: 6E5,
     h: 11
   }, {
-    k: "itemsFound700K",
-    l: "700,000 Items Found",
+    id: "itemsFound700K",
+    desc: "700,000 Items Found",
     m: 18,
-    j: 7E5,
+    requirement: 7E5,
     h: 10
   }, {
-    k: "itemsFound800K",
-    l: "800,000 Items Found",
+    id: "itemsFound800K",
+    desc: "800,000 Items Found",
     m: 18,
-    j: 8E5,
+    requirement: 8E5,
     h: 12
   }, {
-    k: "itemsFound1M",
-    l: "1,000,000 Items Found",
+    id: "itemsFound1M",
+    desc: "1,000,000 Items Found",
     m: 18,
-    j: 1E6,
+    requirement: 1E6,
     h: Ld
   }, {
-    k: "itemsFound1.25M",
-    l: "1,250,000 Items Found",
+    id: "itemsFound1.25M",
+    desc: "1,250,000 Items Found",
     m: 18,
-    j: 125E4,
+    requirement: 125E4,
     h: 22
   }, {
-    k: "itemsFound1.5M",
-    l: "1,500,000 Items Found",
+    id: "itemsFound1.5M",
+    desc: "1,500,000 Items Found",
     m: 18,
-    j: 15E5,
+    requirement: 15E5,
     h: 21
   }, {
-    k: "uncommonItemsFound100",
-    l: "100 Uncommon Items Found",
+    id: "uncommonItemsFound100",
+    desc: "100 Uncommon Items Found",
     m: 19,
-    j: 100,
+    requirement: 100,
     h: Ld
   }, {
-    k: "uncommonItemsFound250",
-    l: "250 Uncommon Items Found",
+    id: "uncommonItemsFound250",
+    desc: "250 Uncommon Items Found",
     m: 19,
-    j: 250,
+    requirement: 250,
     h: Pd
   }, {
-    k: "uncommonItemsFound500",
-    l: "500 Uncommon Items Found",
+    id: "uncommonItemsFound500",
+    desc: "500 Uncommon Items Found",
     m: 19,
-    j: 500,
+    requirement: 500,
     h: yh
   }, {
-    k: "uncommonItemsFound1000",
-    l: "1,000 Uncommon Items Found",
+    id: "uncommonItemsFound1000",
+    desc: "1,000 Uncommon Items Found",
     m: 19,
-    j: 1E3,
+    requirement: 1E3,
     h: 13
   }, {
-    k: "uncommonItemsFound2500",
-    l: "2,500 Uncommon Items Found",
+    id: "uncommonItemsFound2500",
+    desc: "2,500 Uncommon Items Found",
     m: 19,
-    j: 2500,
+    requirement: 2500,
     h: 2
   }, {
-    k: "uncommonItemsFound5000",
-    l: "5,000 Uncommon Items Found",
+    id: "uncommonItemsFound5000",
+    desc: "5,000 Uncommon Items Found",
     m: 19,
-    j: 5E3,
+    requirement: 5E3,
     h: 12
   }, {
-    k: "uncommonItemsFound10K",
-    l: "10,000 Uncommon Items Found",
+    id: "uncommonItemsFound10K",
+    desc: "10,000 Uncommon Items Found",
     m: 19,
-    j: 1E4,
+    requirement: 1E4,
     h: 12
   }, {
-    k: "uncommonItemsFound25K",
-    l: "25,000 Uncommon Items Found",
+    id: "uncommonItemsFound25K",
+    desc: "25,000 Uncommon Items Found",
     m: 19,
-    j: 25E3,
+    requirement: 25E3,
     h: 9
   }, {
-    k: "uncommonItemsFound50K",
-    l: "50,000 Uncommon Items Found",
+    id: "uncommonItemsFound50K",
+    desc: "50,000 Uncommon Items Found",
     m: 19,
-    j: 5E4,
+    requirement: 5E4,
     h: 10
   }, {
-    k: "uncommonItemsFound75K",
-    l: "75,000 Uncommon Items Found",
+    id: "uncommonItemsFound75K",
+    desc: "75,000 Uncommon Items Found",
     m: 19,
-    j: 75E3,
+    requirement: 75E3,
     h: 11
   }, {
-    k: "uncommonItemsFound100K",
-    l: "100,000 Uncommon Items Found",
+    id: "uncommonItemsFound100K",
+    desc: "100,000 Uncommon Items Found",
     m: 19,
-    j: 1E5,
+    requirement: 1E5,
     h: 13
   }, {
-    k: "uncommonItemsFound125K",
-    l: "125,000 Uncommon Items Found",
+    id: "uncommonItemsFound125K",
+    desc: "125,000 Uncommon Items Found",
     m: 19,
-    j: 125E3,
+    requirement: 125E3,
     h: 1
   }, {
-    k: "uncommonItemsFound150K",
-    l: "150,000 Uncommon Items Found",
+    id: "uncommonItemsFound150K",
+    desc: "150,000 Uncommon Items Found",
     m: 19,
-    j: 15E4,
+    requirement: 15E4,
     h: 13
   }, {
-    k: "uncommonItemsFound200K",
-    l: "200,000 Uncommon Items Found",
+    id: "uncommonItemsFound200K",
+    desc: "200,000 Uncommon Items Found",
     m: 19,
-    j: 2E5,
+    requirement: 2E5,
     h: Pd
   }, {
-    k: "uncommonItemsFound250K",
-    l: "250,000 Uncommon Items Found",
+    id: "uncommonItemsFound250K",
+    desc: "250,000 Uncommon Items Found",
     m: 19,
-    j: 25E4,
+    requirement: 25E4,
     h: 19
   }, {
-    k: "uncommonItemsFound300K",
-    l: "300,000 Uncommon Items Found",
+    id: "uncommonItemsFound300K",
+    desc: "300,000 Uncommon Items Found",
     m: 19,
-    j: 3E5,
+    requirement: 3E5,
     h: 22
   }, {
-    k: "rareItemsFound50",
-    l: "50 Rare Items Found",
+    id: "rareItemsFound50",
+    desc: "50 Rare Items Found",
     m: 20,
-    j: 50,
+    requirement: 50,
     h: 14
   }, {
-    k: "rareItemsFound100",
-    l: "100 Rare Items Found",
+    id: "rareItemsFound100",
+    desc: "100 Rare Items Found",
     m: 20,
-    j: 100,
+    requirement: 100,
     h: Ld
   }, {
-    k: "rareItemsFound250",
-    l: "250 Rare Items Found",
+    id: "rareItemsFound250",
+    desc: "250 Rare Items Found",
     m: 20,
-    j: 250,
+    requirement: 250,
     h: 14
   }, {
-    k: "rareItemsFound500",
-    l: "500 Rare Items Found",
+    id: "rareItemsFound500",
+    desc: "500 Rare Items Found",
     m: 20,
-    j: 500,
+    requirement: 500,
     h: 1
   }, {
-    k: "rareItemsFound1000",
-    l: "1,000 Rare Items Found",
+    id: "rareItemsFound1000",
+    desc: "1,000 Rare Items Found",
     m: 20,
-    j: 1E3,
+    requirement: 1E3,
     h: 14
   }, {
-    k: "rareItemsFound2500",
-    l: "2,500 Rare Items Found",
+    id: "rareItemsFound2500",
+    desc: "2,500 Rare Items Found",
     m: 20,
-    j: 2500,
+    requirement: 2500,
     h: 2
   }, {
-    k: "rareItemsFound5K",
-    l: "5,000 Rare Items Found",
+    id: "rareItemsFound5K",
+    desc: "5,000 Rare Items Found",
     m: 20,
-    j: 5E3,
+    requirement: 5E3,
     h: 22
   }, {
-    k: "rareItemsFound10K",
-    l: "10,000 Rare Items Found",
+    id: "rareItemsFound10K",
+    desc: "10,000 Rare Items Found",
     m: 20,
-    j: 1E4,
+    requirement: 1E4,
     h: 17
   }, {
-    k: "rareItemsFound20K",
-    l: "20,000 Rare Items Found",
+    id: "rareItemsFound20K",
+    desc: "20,000 Rare Items Found",
     m: 20,
-    j: 2E4,
+    requirement: 2E4,
     h: 14
   }, {
-    k: "rareItemsFound30K",
-    l: "30,000 Rare Items Found",
+    id: "rareItemsFound30K",
+    desc: "30,000 Rare Items Found",
     m: 20,
-    j: 3E4,
+    requirement: 3E4,
     h: 12
   }, {
-    k: "rareItemsFound40K",
-    l: "40,000 Rare Items Found",
+    id: "rareItemsFound40K",
+    desc: "40,000 Rare Items Found",
     m: 20,
-    j: 4E4,
+    requirement: 4E4,
     h: 14
   }, {
-    k: "rareItemsFound60K",
-    l: "60,000 Rare Items Found",
+    id: "rareItemsFound60K",
+    desc: "60,000 Rare Items Found",
     m: 20,
-    j: 6E4,
+    requirement: 6E4,
     h: 16
   }, {
-    k: "rareItemsFound80K",
-    l: "80,000 Rare Items Found",
+    id: "rareItemsFound80K",
+    desc: "80,000 Rare Items Found",
     m: 20,
-    j: 8E4,
+    requirement: 8E4,
     h: 13
   }, {
-    k: "rareItemsFound100K",
-    l: "100,000 Rare Items Found",
+    id: "rareItemsFound100K",
+    desc: "100,000 Rare Items Found",
     m: 20,
-    j: 1E5,
+    requirement: 1E5,
     h: 15
   }, {
-    k: "historicItemsFound10",
-    l: "10 Historic Items Found",
+    id: "historicItemsFound10",
+    desc: "10 Historic Items Found",
     m: 21,
-    j: 10,
+    requirement: 10,
     h: 15
   }, {
-    k: "historicItemsFound25",
-    l: "25 Historic Items Found",
+    id: "historicItemsFound25",
+    desc: "25 Historic Items Found",
     m: 21,
-    j: 25,
+    requirement: 25,
     h: 7
   }, {
-    k: "historicItemsFound50",
-    l: "50 Historic Items Found",
+    id: "historicItemsFound50",
+    desc: "50 Historic Items Found",
     m: 21,
-    j: 50,
+    requirement: 50,
     h: 15
   }, {
-    k: "historicItemsFound100",
-    l: "100 Historic Items Found",
+    id: "historicItemsFound100",
+    desc: "100 Historic Items Found",
     m: 21,
-    j: 100,
+    requirement: 100,
     h: 8
   }, {
-    k: "historicItemsFound250",
-    l: "250 Historic Items Found",
+    id: "historicItemsFound250",
+    desc: "250 Historic Items Found",
     m: 21,
-    j: 250,
+    requirement: 250,
     h: 15
   }, {
-    k: "historicItemsFound500",
-    l: "500 Historic Items Found",
+    id: "historicItemsFound500",
+    desc: "500 Historic Items Found",
     m: 21,
-    j: 500,
+    requirement: 500,
     h: 6
   }, {
-    k: "historicItemsFound1000",
-    l: "1,000 Historic Items Found",
+    id: "historicItemsFound1000",
+    desc: "1,000 Historic Items Found",
     m: 21,
-    j: 1E3,
+    requirement: 1E3,
     h: 15
   }, {
-    k: "historicItemsFound1500",
-    l: "1,500 Historic Items Found",
+    id: "historicItemsFound1500",
+    desc: "1,500 Historic Items Found",
     m: 21,
-    j: 1500,
+    requirement: 1500,
     h: 2
   }, {
-    k: "historicItemsFound2K",
-    l: "2,000 Historic Items Found",
+    id: "historicItemsFound2K",
+    desc: "2,000 Historic Items Found",
     m: 21,
-    j: 2E3,
+    requirement: 2E3,
     h: 15
   }, {
-    k: "historicItemsFound3K",
-    l: "3,000 Historic Items Found",
+    id: "historicItemsFound3K",
+    desc: "3,000 Historic Items Found",
     m: 21,
-    j: 3E3,
+    requirement: 3E3,
     h: 18
   }, {
-    k: "historicItemsFound4K",
-    l: "4,000 Historic Items Found",
+    id: "historicItemsFound4K",
+    desc: "4,000 Historic Items Found",
     m: 21,
-    j: 4E3,
+    requirement: 4E3,
     h: 15
   }, {
-    k: "historicItemsFound5K",
-    l: "5,000 Historic Items Found",
+    id: "historicItemsFound5K",
+    desc: "5,000 Historic Items Found",
     m: 21,
-    j: 5E3,
+    requirement: 5E3,
     h: Ld
   }, {
-    k: "historicItemsFound6K",
-    l: "6,000 Historic Items Found",
+    id: "historicItemsFound6K",
+    desc: "6,000 Historic Items Found",
     m: 21,
-    j: 6E3,
+    requirement: 6E3,
     h: 21
   }, {
-    k: "historicItemsFound7K",
-    l: "7,000 Historic Items Found",
+    id: "historicItemsFound7K",
+    desc: "7,000 Historic Items Found",
     m: 21,
-    j: 7E3,
+    requirement: 7E3,
     h: 8
   }, {
-    k: "historicItemsFound8K",
-    l: "8,000 Historic Items Found",
+    id: "historicItemsFound8K",
+    desc: "8,000 Historic Items Found",
     m: 21,
-    j: 8E3,
+    requirement: 8E3,
     h: 7
   }, {
-    k: "ancientItemsFound3",
-    l: "3 Ancient Items Found",
+    id: "ancientItemsFound3",
+    desc: "3 Ancient Items Found",
     m: 22,
-    j: 3,
+    requirement: 3,
     h: 16
   }, {
-    k: "ancientItemsFound10",
-    l: "10 Ancient Items Found",
+    id: "ancientItemsFound10",
+    desc: "10 Ancient Items Found",
     m: 22,
-    j: 10,
+    requirement: 10,
     h: 1
   }, {
-    k: "ancientItemsFound25",
-    l: "25 Ancient Items Found",
+    id: "ancientItemsFound25",
+    desc: "25 Ancient Items Found",
     m: 22,
-    j: 25,
+    requirement: 25,
     h: 16
   }, {
-    k: "ancientItemsFound50",
-    l: "50 Ancient Items Found",
+    id: "ancientItemsFound50",
+    desc: "50 Ancient Items Found",
     m: 22,
-    j: 50,
+    requirement: 50,
     h: 2
   }, {
-    k: "ancientItemsFound75",
-    l: "75 Ancient Items Found",
+    id: "ancientItemsFound75",
+    desc: "75 Ancient Items Found",
     m: 22,
-    j: 75,
+    requirement: 75,
     h: 16
   }, {
-    k: "ancientItemsFound100",
-    l: "100 Ancient Items Found",
+    id: "ancientItemsFound100",
+    desc: "100 Ancient Items Found",
     m: 22,
-    j: 100,
+    requirement: 100,
     h: 17
   }, {
-    k: "ancientItemsFound150",
-    l: "150 Ancient Items Found",
+    id: "ancientItemsFound150",
+    desc: "150 Ancient Items Found",
     m: 22,
-    j: 150,
+    requirement: 150,
     h: 16
   }, {
-    k: "ancientItemsFound200",
-    l: "200 Ancient Items Found",
+    id: "ancientItemsFound200",
+    desc: "200 Ancient Items Found",
     m: 22,
-    j: 200,
+    requirement: 200,
     h: Ld
   }, {
-    k: "ancientItemsFound300",
-    l: "300 Ancient Items Found",
+    id: "ancientItemsFound300",
+    desc: "300 Ancient Items Found",
     m: 22,
-    j: 300,
+    requirement: 300,
     h: 16
   }, {
-    k: "ancientItemsFound400",
-    l: "400 Ancient Items Found",
+    id: "ancientItemsFound400",
+    desc: "400 Ancient Items Found",
     m: 22,
-    j: 400,
+    requirement: 400,
     h: 9
   }, {
-    k: "ancientItemsFound500",
-    l: "500 Ancient Items Found",
+    id: "ancientItemsFound500",
+    desc: "500 Ancient Items Found",
     m: 22,
-    j: 500,
+    requirement: 500,
     h: 12
   }, {
-    k: "ancientItemsFound600",
-    l: "600 Ancient Items Found",
+    id: "ancientItemsFound600",
+    desc: "600 Ancient Items Found",
     m: 22,
-    j: 600,
+    requirement: 600,
     h: 11
   }, {
-    k: "ancientItemsFound700",
-    l: "700 Ancient Items Found",
+    id: "ancientItemsFound700",
+    desc: "700 Ancient Items Found",
     m: 22,
-    j: 700,
+    requirement: 700,
     h: 10
   }, {
-    k: "ancientItemsFound800",
-    l: "800 Ancient Items Found",
+    id: "ancientItemsFound800",
+    desc: "800 Ancient Items Found",
     m: 22,
-    j: 800,
+    requirement: 800,
     h: 9
   }, {
-    k: "reducedPartyVictory1",
-    l: "Win With 1 Adventurer",
+    id: "reducedPartyVictory1",
+    desc: "Win With 1 Adventurer",
     m: 23,
-    j: 1,
+    requirement: 1,
     h: Ld,
     ab: !0
   }, {
-    k: "reducedPartyVictory2",
-    l: "Win With 2 Adventurers",
+    id: "reducedPartyVictory2",
+    desc: "Win With 2 Adventurers",
     m: 23,
-    j: 2,
+    requirement: 2,
     h: 19,
     ab: !0
   }, {
-    k: "reducedPartyVictory3",
-    l: "Win With 3 Adventurers",
+    id: "reducedPartyVictory3",
+    desc: "Win With 3 Adventurers",
     m: 23,
-    j: 3,
+    requirement: 3,
     h: 21,
     ab: !0
   }, {
-    k: "singleClassVictory",
-    l: "Win With 4 of Same Class",
+    id: "singleClassVictory",
+    desc: "Win With 4 of Same Class",
     m: 24,
-    j: 1,
+    requirement: 1,
     h: 22,
     ab: !0
   }, {
-    k: "barbarianVictory",
-    l: "Win With Class: Barbarian",
+    id: "barbarianVictory",
+    desc: "Win With Class: Barbarian",
     m: 25,
     Hb: 1,
-    j: 1,
+    requirement: 1,
     h: 16,
     ab: !0
   }, {
-    k: "fighterVictory",
-    l: "Win With Class: Fighter",
+    id: "fighterVictory",
+    desc: "Win With Class: Fighter",
     m: 25,
     Hb: 0,
-    j: 1,
+    requirement: 1,
     h: 15,
     ab: !0
   }, {
-    k: "priestVictory",
-    l: "Win With Class: Priest",
+    id: "priestVictory",
+    desc: "Win With Class: Priest",
     m: 25,
     Hb: 6,
-    j: 1,
+    requirement: 1,
     h: 14,
     ab: !0
   }, {
-    k: "rangerVictory",
-    l: "Win With Class: Ranger",
+    id: "rangerVictory",
+    desc: "Win With Class: Ranger",
     m: 25,
     Hb: 2,
-    j: 1,
+    requirement: 1,
     h: 13,
     ab: !0
   }, {
-    k: "druidVictory",
-    l: "Win With Class: Druid",
+    id: "druidVictory",
+    desc: "Win With Class: Druid",
     m: 25,
     Hb: 10,
-    j: 1,
+    requirement: 1,
     h: 8,
     ab: !0
   }, {
-    k: "rogueVictory",
-    l: "Win With Class: Rogue",
+    id: "rogueVictory",
+    desc: "Win With Class: Rogue",
     m: 25,
     Hb: 7,
-    j: 1,
+    requirement: 1,
     h: 6,
     ab: !0
   }, {
-    k: "pyromancerVictory",
-    l: "Win With Class: Pyromancer",
+    id: "pyromancerVictory",
+    desc: "Win With Class: Pyromancer",
     m: 25,
     Hb: 4,
-    j: 1,
+    requirement: 1,
     h: 7,
     ab: !0
   }, {
-    k: "electromancerVictory",
-    l: "Win With Class: Electromancer",
+    id: "electromancerVictory",
+    desc: "Win With Class: Electromancer",
     m: 25,
     Hb: 3,
-    j: 1,
+    requirement: 1,
     h: 12,
     ab: !0
   }, {
-    k: "necromancerVictory",
-    l: "Win With Class: Necromancer",
+    id: "necromancerVictory",
+    desc: "Win With Class: Necromancer",
     m: 25,
     Hb: 9,
-    j: 1,
+    requirement: 1,
     h: 11,
     ab: !0
   }, {
-    k: "chickenKingVictory",
-    l: "Win With Class: Chicken King",
+    id: "chickenKingVictory",
+    desc: "Win With Class: Chicken King",
     m: 25,
     Hb: 11,
-    j: 1,
+    requirement: 1,
     h: 9,
     ab: !0
   }, {
-    k: "ninjaVictory",
-    l: "Win With Class: Ninja",
+    id: "ninjaVictory",
+    desc: "Win With Class: Ninja",
     m: 25,
     Hb: 8,
-    j: 1,
+    requirement: 1,
     h: 2,
     ab: !0
   }, {
-    k: "continuationVictory1",
-    l: "Continuation Victory",
+    id: "continuationVictory1",
+    desc: "Continuation Victory",
     m: 26,
-    j: 1,
+    requirement: 1,
     h: 10,
     ab: !0
   }, {
-    k: "continuationVictory2",
-    l: "Second Continuation Victory",
+    id: "continuationVictory2",
+    desc: "Second Continuation Victory",
     m: 26,
-    j: 2,
+    requirement: 2,
     h: Ld,
     ab: !0
   }, {
-    k: "continuationVictory3",
-    l: "Third Continuation Victory",
+    id: "continuationVictory3",
+    desc: "Third Continuation Victory",
     m: 26,
-    j: 3,
+    requirement: 3,
     h: 22,
     ab: !0
   }, {
-    k: "continuationVictory4",
-    l: "Fourth Continuation Victory",
+    id: "continuationVictory4",
+    desc: "Fourth Continuation Victory",
     m: 26,
-    j: 4,
+    requirement: 4,
     h: 2,
     ab: !0
   }, {
-    k: "soloBarbarianVictory",
-    l: "Win With Single Barbarian",
+    id: "soloBarbarianVictory",
+    desc: "Win With Single Barbarian",
     m: 27,
     Hb: 1,
-    j: 1,
+    requirement: 1,
     h: 22,
     ab: !0
   }, {
-    k: "soloFighterVictory",
-    l: "Win With Single Fighter",
+    id: "soloFighterVictory",
+    desc: "Win With Single Fighter",
     m: 27,
     Hb: 0,
-    j: 1,
+    requirement: 1,
     h: 1,
     ab: !0
   }, {
-    k: "soloPriestVictory",
-    l: "Win With Single Priest",
+    id: "soloPriestVictory",
+    desc: "Win With Single Priest",
     m: 27,
     Hb: 6,
-    j: 1,
+    requirement: 1,
     h: 13,
     ab: !0
   }, {
-    k: "soloRangerVictory",
-    l: "Win With Single Ranger",
+    id: "soloRangerVictory",
+    desc: "Win With Single Ranger",
     m: 27,
     Hb: 2,
-    j: 1,
+    requirement: 1,
     h: 14,
     ab: !0
   }, {
-    k: "soloDruidVictory",
-    l: "Win With Single Druid",
+    id: "soloDruidVictory",
+    desc: "Win With Single Druid",
     m: 27,
     Hb: 10,
-    j: 1,
+    requirement: 1,
     h: 15,
     ab: !0
   }, {
-    k: "soloRogueVictory",
-    l: "Win With Single Rogue",
+    id: "soloRogueVictory",
+    desc: "Win With Single Rogue",
     m: 27,
     Hb: 7,
-    j: 1,
+    requirement: 1,
     h: 16,
     ab: !0
   }, {
-    k: "soloPyromancerVictory",
-    l: "Win With Single Pyromancer",
+    id: "soloPyromancerVictory",
+    desc: "Win With Single Pyromancer",
     m: 27,
     Hb: 4,
-    j: 1,
+    requirement: 1,
     h: 21,
     ab: !0
   }, {
-    k: "soloElectromancerVictory",
-    l: "Win With Single Electromancer",
+    id: "soloElectromancerVictory",
+    desc: "Win With Single Electromancer",
     m: 27,
     Hb: 3,
-    j: 1,
+    requirement: 1,
     h: Pd,
     ab: !0
   }, {
-    k: "soloNecromancerVictory",
-    l: "Win With Single Necromancer",
+    id: "soloNecromancerVictory",
+    desc: "Win With Single Necromancer",
     m: 27,
     Hb: 9,
-    j: 1,
+    requirement: 1,
     h: 19,
     ab: !0
   }, {
-    k: "soloChickenKingVictory",
-    l: "Win With Single Chicken King",
+    id: "soloChickenKingVictory",
+    desc: "Win With Single Chicken King",
     m: 27,
     Hb: 11,
-    j: 1,
+    requirement: 1,
     h: Ld,
     ab: !0
   }, {
-    k: "soloNinjaVictory",
-    l: "Win With Single Ninja",
+    id: "soloNinjaVictory",
+    desc: "Win With Single Ninja",
     m: 27,
     Hb: 8,
-    j: 1,
+    requirement: 1,
     h: 17,
     ab: !0
   }
@@ -14944,10 +14943,10 @@ var Vr = [{
 
 function Wr(a) {
   this.Of = this.We = !1;
-  this.k = a.k;
-  this.l = a.l;
+  this.id = a.id;
+  this.desc = a.desc;
   this.m = a.m;
-  this.j = a.j;
+  this.requirement = a.requirement;
   this.Hb = a.Hb;
   this.h = a.h;
   this.Vt = Pr[a.h].yc;
@@ -14972,7 +14971,7 @@ function $r(a) {
     a.Of = !0;
     var b = w.i.Ig,
       c = b.Ze.indexOf(a); - 1 < c && b.Ze.splice(c, 1);
-    Ta("Achievement", a.l)
+    Ta("Achievement", a.desc)
   }
 }
 
@@ -14980,13 +14979,13 @@ function as(a) {
   var b = w.i.Bg;
   switch (a.m) {
     case 23:
-      return 1 === a.j ? 0 < b.hn : 2 === a.j ? 0 < b.jn : 3 === a.j ? 0 < b.kn : !1;
+      return 1 === a.requirement ? 0 < b.hn : 2 === a.requirement ? 0 < b.jn : 3 === a.requirement ? 0 < b.kn : !1;
     case 24:
       return 0 < b.vn;
     case 25:
       return 0 < bs(b, a.Hb);
     case 26:
-      return b.Xm >= a.j;
+      return b.Xm >= a.requirement;
     case 27:
       return 0 < cs(b, a.Hb);
     default:
@@ -16005,7 +16004,7 @@ e.Cd = function() {
   a = this.vy < a.length ? a[this.vy] : null;
   this.A = null != a;
   var b = this.Ic != a || this.Ub != this.A;
-  b && a && (this.Ve = a.l, this.jk = "Reward: " + Xr(a));
+  b && a && (this.Ve = a.desc, this.jk = "Reward: " + Xr(a));
   this.Ic = a;
   this.Ub = this.A;
   return b
@@ -16013,7 +16012,7 @@ e.Cd = function() {
 
 function Ms(a) {
   this.Ic = a;
-  this.Ve = this.Ic.We ? this.Ic.l : Yr(this.Ic);
+  this.Ve = this.Ic.We ? this.Ic.desc : Yr(this.Ic);
   this.jk = Ns(this);
   this.YA = this.VA = this.A = !1
 }
@@ -16044,7 +16043,7 @@ e.Cd = function() {
     b = this.Ic.We;
   this.A = b && !a;
   var c = this.VA != a || this.YA != b;
-  c && (this.Ve = this.Ic.We ? this.Ic.l : Yr(this.Ic), this.jk = Ns(this));
+  c && (this.Ve = this.Ic.We ? this.Ic.desc : Yr(this.Ic), this.jk = Ns(this));
   this.VA = a;
   this.YA = b;
   return c
@@ -16082,8 +16081,8 @@ e.qc = function() {
   return this.A
 };
 e.Qc = function() {
-  if (!(this.Hc || this.kh.Gb > w.i.ae.Dd)) {
-    var a = this.kh.Gb,
+  if (!(this.Hc || this.kh.cost > w.i.ae.Dd)) {
+    var a = this.kh.cost,
       b = w.i.ae;
     b.An += a;
     b.Dd -= a;
@@ -16096,13 +16095,13 @@ e.Qc = function() {
   }
 };
 e.Bb = function() {
-  return this.kh.Gb
+  return this.kh.cost
 };
 e.lb = function() {
-  return this.kh.mc
+  return this.kh.desc
 };
 e.Cd = function() {
-  this.A = !this.Hc && this.kh.Gb <= w.i.ae.Dd;
+  this.A = !this.Hc && this.kh.cost <= w.i.ae.Dd;
   var a = this.Ub !== this.A;
   this.Ub = this.A;
   return a
@@ -27984,7 +27983,7 @@ function kB(a, b) {
                       Bf = void 0;
                     b: {
                       for (var Mh = w.i.ae, Pe = void 0, Pe = 0; Pe < Mh.tl.length; Pe++)
-                        if (Mh.tl[Pe].kh.Yb === Lh) {
+                        if (Mh.tl[Pe].kh.id === Lh) {
                           Bf = Mh.tl[Pe];
                           break b
                         } Bf = null
@@ -28294,7 +28293,7 @@ function lB(a) {
     for (Aa = 0; Aa < sc.length; Aa++) {
       var db = sc[Aa];
       rc.push({
-        upgradeId: db.kh.Yb,
+        upgradeId: db.kh.id,
         upgradePurchased: db.He()
       })
     }
@@ -28311,7 +28310,7 @@ function lB(a) {
     for (xb = 0; xb < ka.length; xb++) {
       var Na = ka[xb];
       Eb = {
-        achievementId: Na.k,
+        achievementId: Na.id,
         obtained: Na.We,
         applied: Na.Of
       };
@@ -28704,7 +28703,7 @@ function pB(a) {
         X, Ca;
       for (X = T.ik.length - 1; 0 <= X; X--) {
         var qa = Ca = T.ik[X];
-        qa.We || (qa.We = qa.ab ? as(qa) : ds(qa) >= qa.j);
+        qa.We || (qa.We = qa.ab ? as(qa) : ds(qa) >= qa.requirement);
         qa.We && (T.ik.splice(X, 1), T.Ze.push(Ca))
       }
       for (X = T.Ze.length - 1; 0 <= X; X--) Ca = T.Ze[X], Ca.Of && T.Ze.splice(X, 1)
@@ -41200,7 +41199,7 @@ var w = {
       this.Qi = {};
       this.pj = {};
       var a, b = [];
-      for (a = 0; a < Rr.length; a++) b.push(new Os(Rr[a]));
+      for (a = 0; a < apUpgrades.length; a++) b.push(new Os(apUpgrades[a]));
       this.tl = b
     },
     Ig: new function() {
@@ -41209,7 +41208,7 @@ var w = {
       this.ik = [];
       this.Ze = [];
       var a, b;
-      for (a = 0; a < Vr.length; a++) b = new Wr(Vr[a]), this.jj.push(b), this.Lt[b.k] && console.log("Error. Duplicate achievement id: " + b.k), this.Lt[b.k] = b
+      for (a = 0; a < achievments.length; a++) b = new Wr(achievments[a]), this.jj.push(b), this.Lt[b.id] && console.log("Error. Duplicate achievement id: " + b.id), this.Lt[b.id] = b
     },
     Ih: new hx,
     Ua: new ix,
