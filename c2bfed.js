@@ -6016,13 +6016,13 @@ function ra(a, b) {
   return -1 !== a.indexOf(b, a.length - b.length)
 };
 
-function ua(a) {
+function formatNumberSuffix(a) {
   return 1E4 > a ? "" + m(a) : 1E5 > a ? (a / 1E3).toFixed(1) + "K" : 1E6 > a ? m(a / 1E3) + "K" : 1E7 > a ? (a / 1E6).toFixed(2) + "M" : 1E8 > a ? (a / 1E6).toFixed(1) + "M" : 1E9 > a ? m(a / 1E6) + "M" : 1E10 > a ? (a / 1E9).toFixed(2) + "B" : 1E11 > a ? (a / 1E9).toFixed(1) + "B" : 1E12 > a ? m(a / 1E9) + "B" : 1E13 > a ? (a / 1E12).toFixed(2) + "T" : 1E14 > a ? (a / 1E12).toFixed(1) + "T" : 1E15 > a ? m(a / 1E12) + "T" : 1E16 > a ? (a / 1E15).toFixed(2) + "P" : 1E17 > a ? (a / 1E15).toFixed(1) + "P" : 1E18 > a ? m(a / 1E15) + "P" : 1E19 > a ? (a / 1E18).toFixed(2) + "P" : 1E20 > a ? (a / 1E18).toFixed(1) + "P" : 1E21 > a ? m(a / 1E18) + "P" : 1E22 > a ? (a / 1E21).toFixed(2) +
     "Z" : 9.999999999999999E22 > a ? (a / 1E21).toFixed(1) + "Z" : 1E24 > a ? m(a / 1E21) + "Z" : 1E25 > a ? (a / 1E24).toFixed(2) + "Y" : 1E26 > a ? (a / 1E24).toFixed(1) + "Y" : 1E27 > a ? m(a / 1E24) + "Y" : a.toFixed(0)
 }
 
-function r(a) {
-  return 0 <= a ? ua(a) : "-" + ua(-a)
+function formatNumber(a) {
+  return 0 <= a ? formatNumberSuffix(a) : "-" + formatNumberSuffix(-a)
 }
 
 function xa(a) {
@@ -8526,6 +8526,7 @@ function rh(a, b) {
 }
 
 function sh(a, b, c, d) {
+  // console.log(a,b,c,d);
   if (!w.ig) {
     c = new ph(c, d);
     b = b.p;
@@ -14964,7 +14965,7 @@ function Yr(a) {
   return a.Rt
 }
 
-function $r(a) {
+function $formatNumber(a) {
   if (!a.We || a.Of) console.log("not applying achievement bonus. obtained=" + a.We + " applied=" + a.Of);
   else {
     Tr(a.h, a.Vt);
@@ -15996,7 +15997,7 @@ e.qc = function() {
   return this.A
 };
 e.Qc = function() {
-  this.Ic && ($r(this.Ic), this.Ic = null, this.A = !1, hs(this))
+  this.Ic && ($formatNumber(this.Ic), this.Ic = null, this.A = !1, hs(this))
 };
 e.Cd = function() {
   var a;
@@ -16034,7 +16035,7 @@ e.qc = function() {
   return this.A
 };
 e.Qc = function() {
-  $r(this.Ic);
+  $formatNumber(this.Ic);
   this.A = !1;
   hs(this)
 };
@@ -19387,7 +19388,7 @@ function Nv(a, b, c, d, f) {
     var u = m(Math.max(0.1 * n, 0.4 * n * Math.random()));
     1 > u && (u = 1);
     p = p.xm[h];
-    p = new Fv(h, u, "+" + r(u) + " " + p.description, p.ca)
+    p = new Fv(h, u, "+" + formatNumber(u) + " " + p.description, p.ca)
   }
   a = a.OD;
   switch (f) {
@@ -22547,7 +22548,7 @@ e.ba = function() {
   var a = this.H.Bb(),
     b = this.H.ib(),
     c = this.H.lb();
-  this.Lb !== a && (this.Lb = a, this.Hi.innerHTML = r(a));
+  this.Lb !== a && (this.Lb = a, this.Hi.innerHTML = formatNumber(a));
   this.gb !== b && (this.gb = b, this.Ji.innerHTML = b);
   this.fb !== c && (this.fb = c, this.Ii.innerHTML = c)
 };
@@ -22632,10 +22633,10 @@ e.ba = function() {
         d = a.Kc.Ma;
       this.hm.style.background = "url('spritesheet/monsters.png') -" + (c.ub + 10) + "px -" + (c.vb + 12) + "px";
       this.Ty.innerHTML = this.H.lb();
-      this.aD.innerHTML = r(a.K.Am) + " XP";
+      this.aD.innerHTML = formatNumber(a.K.Am) + " XP";
       this.Ry.innerHTML = "Level " + (b + 1);
-      this.Py.innerHTML = ", " + r(Ia(b + 1, sx, d.Cf)) + " HP";
-      this.Sy.innerHTML = ", " + r(Ia(b + 1, tx, d.Ef)) + " SP"
+      this.Py.innerHTML = ", " + formatNumber(Ia(b + 1, sx, d.Cf)) + " HP";
+      this.Sy.innerHTML = ", " + formatNumber(Ia(b + 1, tx, d.Ef)) + " SP"
     }
   } else console.log("bug in upgrade button")
 };
@@ -22707,7 +22708,7 @@ e.ba = function() {
     this.Qm.style.background = "url('spritesheet/monsters.png') -" + (c.ub + 10) + "px -" + (c.vb + 12) + "px";
     this.iA.innerHTML = "Lvl " + a.ns;
     b = (b = a.nj.ef(a.r)) ? a.va - b.va : a.va;
-    this.ks.innerHTML = 0 < b ? "+" + r(b) + " " + Jv(a) : r(b) + " " + Jv(a)
+    this.ks.innerHTML = 0 < b ? "+" + formatNumber(b) + " " + Jv(a) : formatNumber(b) + " " + Jv(a)
   }
 };
 e.eb = function() {
@@ -23010,7 +23011,7 @@ e.ba = function() {
   var a = this.H.Bb(),
     b = this.H.ib(),
     c = this.H.lb();
-  this.Lb !== a && (this.Lb = a, this.dj.innerHTML = r(a));
+  this.Lb !== a && (this.Lb = a, this.dj.innerHTML = formatNumber(a));
   this.gb !== b && (this.gb = b, this.fj.innerHTML = b);
   this.fb !== c && (this.fb = c, this.ej.innerHTML = c)
 };
@@ -23086,7 +23087,7 @@ e.te = function() {
 e.ba = function() {
   var a = this.H.Bb(),
     b = this.H.Wo();
-  this.Lb !== a && (this.Lb = a, this.Cq.innerHTML = r(a));
+  this.Lb !== a && (this.Lb = a, this.Cq.innerHTML = formatNumber(a));
   this.ui !== b && (this.ui = b) && (a = w.I.v(b.Fo), this.Nd.style.background = "url('spritesheet/terrain.png') -" + a.ub + "px -" + a.vb + "px", this.Vg.innerHTML = b.Eo)
 };
 e.eb = function() {
@@ -23154,7 +23155,7 @@ e.ba = function() {
     b = this.H.Pz(),
     c = this.H.ib(),
     d = this.H.lb();
-  this.Lb !== a && (this.Lb = a, this.Cq.innerHTML = r(a));
+  this.Lb !== a && (this.Lb = a, this.Cq.innerHTML = formatNumber(a));
   this.tm !== b && (this.tm = b) && (a = b.Wh, this.Vh.style.background = "url('spritesheet/items.png') -" + a.ub + "px -" + a.vb + "px");
   this.gb !== c && (this.gb = c, this.dq.innerHTML = c);
   this.Az !== d && (this.Az = d, this.we.innerHTML = this.H.lb())
@@ -23219,7 +23220,7 @@ e.te = function() {
 };
 e.ba = function() {
   var a = w.Aa.Sd;
-  this.Gk !== a && (this.Gk = a, this.Uz.innerHTML = "+" + r(a))
+  this.Gk !== a && (this.Gk = a, this.Uz.innerHTML = "+" + formatNumber(a))
 };
 e.eb = function() {
   this.Cm = P("table", this.W, null, null);
@@ -23284,7 +23285,7 @@ e.te = function() {
 };
 e.ba = function() {
   var a = w.ug.ni;
-  this.Dk !== a && (this.Dk = a, this.Tz.innerHTML = "+" + r(a))
+  this.Dk !== a && (this.Dk = a, this.Tz.innerHTML = "+" + formatNumber(a))
 };
 e.eb = function() {
   this.Hm = P("table", this.W, null, null);
@@ -23361,9 +23362,9 @@ e.ba = function() {
   var a = this.H.Bb(),
     b = this.H.ib(),
     c = this.H.Kr();
-  this.Lb != a && (this.Lb = a, this.pi.innerHTML = r(a));
+  this.Lb != a && (this.Lb = a, this.pi.innerHTML = formatNumber(a));
   this.gb != b && (this.gb = b, this.jb.innerHTML = b);
-  this.vi != c && (this.vi = c, a = Math.max(1, 10 * (this.vi - 1)) + 1, this.bn = Ia(a, yi, 1), this.$m = Ia(a, zi, 1), this.an = Ia(a, Ai, 1), this.cn = Ia(a, Bi, 1), this.kr.innerHTML = r(this.bn) + " DMG", this.Rq.innerHTML = r(this.$m) + " ARM", this.Sq.innerHTML = r(this.an) + " ATK", this.lr.innerHTML = r(this.cn) + " DEF", c = Th(w.ob, c), c = c[k(c.length)].ll, this.Zm.style.background = "url('spritesheet/monsters.png') -" +
+  this.vi != c && (this.vi = c, a = Math.max(1, 10 * (this.vi - 1)) + 1, this.bn = Ia(a, yi, 1), this.$m = Ia(a, zi, 1), this.an = Ia(a, Ai, 1), this.cn = Ia(a, Bi, 1), this.kr.innerHTML = formatNumber(this.bn) + " DMG", this.Rq.innerHTML = formatNumber(this.$m) + " ARM", this.Sq.innerHTML = formatNumber(this.an) + " ATK", this.lr.innerHTML = formatNumber(this.cn) + " DEF", c = Th(w.ob, c), c = c[k(c.length)].ll, this.Zm.style.background = "url('spritesheet/monsters.png') -" +
     (c.ub + 10) + "px -" + (c.vb + 12) + "px");
   for (var d, f = 0, g = 0, h = 0, l = 0, c = vs(), a = this.H.Kr(), b = 0; b < w.i.D.length; b++) d = w.i.D[b].K, f += $h(d.sd), g += $h(d.je), h += $h(d.xe), l += $h(d.Ae);
   f = m(f / w.i.D.length);
@@ -24211,19 +24212,19 @@ az.prototype.ba = function() {
         p = $h(b.Ae),
         b = b.Eb;
       if (this.av !== c || this.kv !== d) {
-        Ux(this.zy, r(c) + "/" + r(d));
+        Ux(this.zy, formatNumber(c) + "/" + formatNumber(d));
         var s = Math.min(100, m(100 * c / d));
         M(this.Ay).style.width = s + "%";
         this.av = c;
         this.kv = d
       }
-      if (this.Jk !== f || this.mv !== g) Ux(this.Cy, r(f) + "/" + r(g)), c = Math.min(100, m(100 * f / g)), M(this.Dy).style.width =
+      if (this.Jk !== f || this.mv !== g) Ux(this.Cy, formatNumber(f) + "/" + formatNumber(g)), c = Math.min(100, m(100 * f / g)), M(this.Dy).style.width =
         c + "%", this.Jk = f, this.mv = g;
       this.$f !== b && (this.$f = b, Ux(this.By, "Lvl " + b + " " + w.i.D[this.$].Kc.Ka));
-      this.qr !== h && Ux(this.Lq, r(h));
-      this.or !== l && Ux(this.Jq, r(l));
-      this.pr !== n && Ux(this.Kq, r(n));
-      this.rr !== p && Ux(this.Mq, r(p));
+      this.qr !== h && Ux(this.Lq, formatNumber(h));
+      this.or !== l && Ux(this.Jq, formatNumber(l));
+      this.pr !== n && Ux(this.Kq, formatNumber(n));
+      this.rr !== p && Ux(this.Mq, formatNumber(p));
       c = a.Ja.of;
       f = !1;
       this.De++;
@@ -24314,9 +24315,9 @@ ez.prototype.ba = function() {
   var a = w.i.da.cg,
     b = w.i.da.fd,
     c = w.i.da.Je;
-  a !== this.uz && (this.uz = a, Ux(this.pD, "" + r(a)));
-  b !== this.vz && (this.vz = b, Ux(this.tD, "" + r(b)));
-  c !== this.rm && (this.rm = c, Ux(this.Hw, "" + r(c)))
+  a !== this.uz && (this.uz = a, Ux(this.pD, "" + formatNumber(a)));
+  b !== this.vz && (this.vz = b, Ux(this.tD, "" + formatNumber(b)));
+  c !== this.rm && (this.rm = c, Ux(this.Hw, "" + formatNumber(c)))
 };
 
 function fz(a) {
@@ -24822,70 +24823,70 @@ e.ba = function() {
     Ua = a.Zk,
     b = b.nk,
     a = a.nk;
-  this.Zv != c && (this.Zv = c, this.xC.innerHTML = r(c));
-  this.Xv != h && (this.Xv = h, this.CC.innerHTML = r(h));
-  this.ly != g && (this.ly = g, this.vC.innerHTML = r(g));
-  this.Ev != n && (this.Ev = n, this.jB.innerHTML = r(n));
-  this.gy != l && (this.gy = l, this.pC.innerHTML = r(l));
-  this.Ru != s && (this.Ru = s, this.Dz.innerHTML = r(s));
-  this.Ox != p && (this.Ox = p, this.ZB.innerHTML = r(p));
-  this.Hk != y && (this.Hk = y, this.Vm.innerHTML = r(y));
-  this.Xx != u && (this.Xx = u, this.hC.innerHTML = r(u));
-  this.Ck != C && (this.Ck = C, this.vm.innerHTML = r(C));
+  this.Zv != c && (this.Zv = c, this.xC.innerHTML = formatNumber(c));
+  this.Xv != h && (this.Xv = h, this.CC.innerHTML = formatNumber(h));
+  this.ly != g && (this.ly = g, this.vC.innerHTML = formatNumber(g));
+  this.Ev != n && (this.Ev = n, this.jB.innerHTML = formatNumber(n));
+  this.gy != l && (this.gy = l, this.pC.innerHTML = formatNumber(l));
+  this.Ru != s && (this.Ru = s, this.Dz.innerHTML = formatNumber(s));
+  this.Ox != p && (this.Ox = p, this.ZB.innerHTML = formatNumber(p));
+  this.Hk != y && (this.Hk = y, this.Vm.innerHTML = formatNumber(y));
+  this.Xx != u && (this.Xx = u, this.hC.innerHTML = formatNumber(u));
+  this.Ck != C && (this.Ck = C, this.vm.innerHTML = formatNumber(C));
   this.Px != A && (this.Px =
-    A, this.$B.innerHTML = r(A));
-  this.Hu != D && (this.Hu = D, this.Oy.innerHTML = r(D) + "/" + w.kb.pd.length);
-  this.Lx != v && (this.Lx = v, this.WB.innerHTML = r(v));
-  this.Uu != I && (this.Uu = I, this.Jz.innerHTML = r(I));
-  this.Rx != N && (this.Rx = N, this.bC.innerHTML = r(N));
-  this.qv != z && (this.qv = z, this.GA.innerHTML = r(z));
-  this.$x != x && (this.$x = x, this.kC.innerHTML = r(x));
-  this.Wv != J && (this.Wv = J, this.AC.innerHTML = r(J));
-  this.ky != O && (this.ky = O, this.uC.innerHTML = r(O));
-  this.$v != Q && (this.$v = Q, this.LC.innerHTML = r(Q));
+    A, this.$B.innerHTML = formatNumber(A));
+  this.Hu != D && (this.Hu = D, this.Oy.innerHTML = formatNumber(D) + "/" + w.kb.pd.length);
+  this.Lx != v && (this.Lx = v, this.WB.innerHTML = formatNumber(v));
+  this.Uu != I && (this.Uu = I, this.Jz.innerHTML = formatNumber(I));
+  this.Rx != N && (this.Rx = N, this.bC.innerHTML = formatNumber(N));
+  this.qv != z && (this.qv = z, this.GA.innerHTML = formatNumber(z));
+  this.$x != x && (this.$x = x, this.kC.innerHTML = formatNumber(x));
+  this.Wv != J && (this.Wv = J, this.AC.innerHTML = formatNumber(J));
+  this.ky != O && (this.ky = O, this.uC.innerHTML = formatNumber(O));
+  this.$v != Q && (this.$v = Q, this.LC.innerHTML = formatNumber(Q));
   this.ny != la && (this.ny = la, this.yC.innerHTML =
-    r(la));
-  this.Eu != na && (this.Eu = na, this.Ky.innerHTML = r(na));
-  this.Kx != V && (this.Kx = V, this.VB.innerHTML = r(V));
-  this.Yu != H && (this.Yu = H, this.Rz.innerHTML = r(H));
-  this.Tx != K && (this.Tx = K, this.dC.innerHTML = r(K));
-  this.Xu != da && (this.Xu = da, this.Qz.innerHTML = r(da));
-  this.Sx != S && (this.Sx = S, this.cC.innerHTML = r(S));
-  this.Qu != ia && (this.Qu = ia, this.mz.innerHTML = r(ia));
-  this.Nx != W && (this.Nx = W, this.YB.innerHTML = r(W));
-  this.Hv != va && (this.Hv = va, this.lB.innerHTML = r(va));
-  this.hy != ea && (this.hy = ea, this.qC.innerHTML = r(ea));
+    formatNumber(la));
+  this.Eu != na && (this.Eu = na, this.Ky.innerHTML = formatNumber(na));
+  this.Kx != V && (this.Kx = V, this.VB.innerHTML = formatNumber(V));
+  this.Yu != H && (this.Yu = H, this.Rz.innerHTML = formatNumber(H));
+  this.Tx != K && (this.Tx = K, this.dC.innerHTML = formatNumber(K));
+  this.Xu != da && (this.Xu = da, this.Qz.innerHTML = formatNumber(da));
+  this.Sx != S && (this.Sx = S, this.cC.innerHTML = formatNumber(S));
+  this.Qu != ia && (this.Qu = ia, this.mz.innerHTML = formatNumber(ia));
+  this.Nx != W && (this.Nx = W, this.YB.innerHTML = formatNumber(W));
+  this.Hv != va && (this.Hv = va, this.lB.innerHTML = formatNumber(va));
+  this.hy != ea && (this.hy = ea, this.qC.innerHTML = formatNumber(ea));
   this.Ik !=
-    Fb && (this.Ik = Fb, this.Ap.innerHTML = r(Fb));
-  this.Zx != yb && (this.Zx = yb, this.jC.innerHTML = r(yb));
-  this.Tu != T && (this.Tu = T, this.Iz.innerHTML = r(T));
-  this.Qx != pa && (this.Qx = pa, this.aC.innerHTML = r(pa));
-  this.Ku != Ca && (this.Ku = Ca, this.aj.innerHTML = r(Ca));
-  this.Mx != X && (this.Mx = X, this.tC.innerHTML = r(X));
-  this.nv != ta && (this.nv = ta, this.zA.innerHTML = r(ta));
-  this.Yx != qa && (this.Yx = qa, this.iC.innerHTML = r(qa));
-  this.Bv != Gb && (this.Bv = Gb, this.dB.innerHTML = r(Gb));
-  this.ey != eb && (this.ey = eb, this.nC.innerHTML = r(eb));
+    Fb && (this.Ik = Fb, this.Ap.innerHTML = formatNumber(Fb));
+  this.Zx != yb && (this.Zx = yb, this.jC.innerHTML = formatNumber(yb));
+  this.Tu != T && (this.Tu = T, this.Iz.innerHTML = formatNumber(T));
+  this.Qx != pa && (this.Qx = pa, this.aC.innerHTML = formatNumber(pa));
+  this.Ku != Ca && (this.Ku = Ca, this.aj.innerHTML = formatNumber(Ca));
+  this.Mx != X && (this.Mx = X, this.tC.innerHTML = formatNumber(X));
+  this.nv != ta && (this.nv = ta, this.zA.innerHTML = formatNumber(ta));
+  this.Yx != qa && (this.Yx = qa, this.iC.innerHTML = formatNumber(qa));
+  this.Bv != Gb && (this.Bv = Gb, this.dB.innerHTML = formatNumber(Gb));
+  this.ey != eb && (this.ey = eb, this.nC.innerHTML = formatNumber(eb));
   this.Nv != ub && (this.Nv =
-    ub, this.BB.innerHTML = r(ub));
-  this.jy != Da && (this.jy = Da, this.sC.innerHTML = r(Da));
-  this.Av != Ea && (this.Av = Ea, this.UA.innerHTML = r(Ea));
-  this.dy != mb && (this.dy = mb, this.mC.innerHTML = r(mb));
-  this.Iv != wa && (this.Iv = wa, this.nB.innerHTML = r(wa));
-  this.iy != La && (this.iy = La, this.rC.innerHTML = r(La));
-  this.Fk != ha && (this.Fk = ha, this.Um.innerHTML = r(ha));
-  this.Wx != Fa && (this.Wx = Fa, this.gC.innerHTML = r(Fa));
-  this.Ek != Ga && (this.Ek = Ga, this.Tm.innerHTML = r(Ga));
-  this.Vx != ja && (this.Vx = ja, this.fC.innerHTML = r(ja));
+    ub, this.BB.innerHTML = formatNumber(ub));
+  this.jy != Da && (this.jy = Da, this.sC.innerHTML = formatNumber(Da));
+  this.Av != Ea && (this.Av = Ea, this.UA.innerHTML = formatNumber(Ea));
+  this.dy != mb && (this.dy = mb, this.mC.innerHTML = formatNumber(mb));
+  this.Iv != wa && (this.Iv = wa, this.nB.innerHTML = formatNumber(wa));
+  this.iy != La && (this.iy = La, this.rC.innerHTML = formatNumber(La));
+  this.Fk != ha && (this.Fk = ha, this.Um.innerHTML = formatNumber(ha));
+  this.Wx != Fa && (this.Wx = Fa, this.gC.innerHTML = formatNumber(Fa));
+  this.Ek != Ga && (this.Ek = Ga, this.Tm.innerHTML = formatNumber(Ga));
+  this.Vx != ja && (this.Vx = ja, this.fC.innerHTML = formatNumber(ja));
   this.Yv != za && (this.Yv = za,
-    this.DC.innerHTML = r(za));
-  this.my != bb && (this.my = bb, this.wC.innerHTML = r(bb));
-  this.Cv != fb && (this.Cv = fb, this.eB.innerHTML = r(fb));
-  this.fy != nb && (this.fy = nb, this.oC.innerHTML = r(nb));
-  this.bv != Ua && (this.bv = Ua, this.Vz.innerHTML = r(Ua));
-  this.Ux != cb && (this.Ux = cb, this.eC.innerHTML = r(cb));
-  this.Au != a && (this.Au = a, this.Fy.innerHTML = r(a));
-  this.Jx != b && (this.Jx = b, this.UB.innerHTML = r(b));
+    this.DC.innerHTML = formatNumber(za));
+  this.my != bb && (this.my = bb, this.wC.innerHTML = formatNumber(bb));
+  this.Cv != fb && (this.Cv = fb, this.eB.innerHTML = formatNumber(fb));
+  this.fy != nb && (this.fy = nb, this.oC.innerHTML = formatNumber(nb));
+  this.bv != Ua && (this.bv = Ua, this.Vz.innerHTML = formatNumber(Ua));
+  this.Ux != cb && (this.Ux = cb, this.eC.innerHTML = formatNumber(cb));
+  this.Au != a && (this.Au = a, this.Fy.innerHTML = formatNumber(a));
+  this.Jx != b && (this.Jx = b, this.UB.innerHTML = formatNumber(b));
   c = m(d / this.AA);
   g = m(d / 6E4 % 60);
   d = m(d / 1E3 % 60);
@@ -25462,8 +25463,8 @@ e.ux = function(a) {
     this.Fi.innerHTML = Lv(this.item);
     this.Ie.innerHTML = Kv(this.item);
     this.Af.innerHTML = this.item.ns + "";
-    this.gf.innerHTML = r(this.item.zf);
-    this.Oh.innerHTML = r(this.item.va) + " " + Jv(this.item);
+    this.gf.innerHTML = formatNumber(this.item.zf);
+    this.Oh.innerHTML = formatNumber(this.item.va) + " " + Jv(this.item);
     var c = w.i.D[this.$],
       b = c.ef(a.r);
     this.Oh.className = b ? this.item.va > b.va ? "itemValueBetter" : this.item.va < b.va ? "itemValueWorse" : "" : "itemValueBetter";
@@ -25578,7 +25579,7 @@ e.Xa = function() {};
 e.Ne = function() {};
 e.Zd = function() {};
 e.ux = function(a) {
-  (this.item = a) ? (a = this.item.Uk(), this.Ei.style.background = "url('spritesheet/items.png') -" + a.ub + "px -" + a.vb + "px", this.Fi.innerHTML = Lv(this.item), this.Ie.innerHTML = Kv(this.item), this.Af.innerHTML = this.item.ns + "", this.Oh.innerHTML = r(this.item.va) + " " + Jv(this.item), this.gf.innerHTML = r(this.item.zf), this.Ie.className = Dy(this.item.uf())) : (this.Ei.style.background = "", this.Fi.innerHTML = "", this.Ie.innerHTML = "", this.Af.innerHTML = "", this.Oh.innerHTML = "", this.gf.innerHTML = "", this.Ie.className =
+  (this.item = a) ? (a = this.item.Uk(), this.Ei.style.background = "url('spritesheet/items.png') -" + a.ub + "px -" + a.vb + "px", this.Fi.innerHTML = Lv(this.item), this.Ie.innerHTML = Kv(this.item), this.Af.innerHTML = this.item.ns + "", this.Oh.innerHTML = formatNumber(this.item.va) + " " + Jv(this.item), this.gf.innerHTML = formatNumber(this.item.zf), this.Ie.className = Dy(this.item.uf())) : (this.Ei.style.background = "", this.Fi.innerHTML = "", this.Ie.innerHTML = "", this.Af.innerHTML = "", this.Oh.innerHTML = "", this.gf.innerHTML = "", this.Ie.className =
     "")
 };
 e.qi = function() {
@@ -25777,17 +25778,17 @@ Vz.prototype.ba = function() {
     v = 1 + a.Oj,
     a = 0 < a.Oj ? a.Wn : 0;
   this.$f !== b && (this.$f = b, this.rA.innerHTML = b + "");
-  this.Zu !== c && (this.Zu = c, this.Ij.innerHTML = r(c));
-  this.Jk !== d && (this.Jk = d, this.DB.innerHTML = r(d));
+  this.Zu !== c && (this.Zu = c, this.Ij.innerHTML = formatNumber(c));
+  this.Jk !== d && (this.Jk = d, this.DB.innerHTML = formatNumber(d));
   this.Lu !== f && (this.Lu = f, this.bz.innerHTML = f + "");
   this.$u !== g && (this.$u = g, this.Wz.innerHTML = g + "%");
   this.Pv !== h && (this.Pv = h, this.EB.innerHTML = h + "%");
   this.Gk !== l && (this.Gk =
-    l, this.pA.innerHTML = r(l));
-  this.Ik !== n && (this.Ik = n, this.Ap.innerHTML = r(n));
-  this.Kk !== p && (this.Kk = p, this.aj.innerHTML = r(p));
-  this.Nu !== s && (this.Nu = s, this.ez.innerHTML = r(s));
-  this.Ou !== u && (this.Ou = u, this.gz.innerHTML = r(u));
+    l, this.pA.innerHTML = formatNumber(l));
+  this.Ik !== n && (this.Ik = n, this.Ap.innerHTML = formatNumber(n));
+  this.Kk !== p && (this.Kk = p, this.aj.innerHTML = formatNumber(p));
+  this.Nu !== s && (this.Nu = s, this.ez.innerHTML = formatNumber(s));
+  this.Ou !== u && (this.Ou = u, this.gz.innerHTML = formatNumber(u));
   this.Pu !== y && (this.Pu = y, this.hz.innerHTML = y + "%");
   this.Ov !== A && (this.Ov = A, this.AB.innerHTML = A + "%");
   this.Mu !== C && (this.Mu = C, this.dD.innerHTML = C + "%");
@@ -25830,11 +25831,11 @@ Wz.prototype.ba = function() {
     d = a.Pc,
     f = a.Xh,
     a = a.wc;
-  this.Tv !== b && (this.Tv = b, this.XB.innerHTML = r(b));
-  this.dv !== c && (this.dv = c, this.gA.innerHTML = r(c));
-  this.hv !== d && (this.hv = d, this.qA.innerHTML = r(d));
-  this.Mv !== f && (this.Mv = f, this.zB.innerHTML = r(f) + "%");
-  this.Jv !== a && (this.Jv = a, this.vB.innerHTML = r(a) + "%")
+  this.Tv !== b && (this.Tv = b, this.XB.innerHTML = formatNumber(b));
+  this.dv !== c && (this.dv = c, this.gA.innerHTML = formatNumber(c));
+  this.hv !== d && (this.hv = d, this.qA.innerHTML = formatNumber(d));
+  this.Mv !== f && (this.Mv = f, this.zB.innerHTML = formatNumber(f) + "%");
+  this.Jv !== a && (this.Jv = a, this.vB.innerHTML = formatNumber(a) + "%")
 };
 
 function Xz(a, b) {
@@ -26104,13 +26105,13 @@ cA.prototype.Xa = function() {
     d = Math.min(1, a / b),
     d = this.dx * d | 0;
   if (this.$f != this.Sb.xd || this.Sv != this.Sb.Sj) {
-    this.Mo.innerHTML = r(this.Sb.No);
-    this.Ij.innerHTML = r(this.Sb.$o);
-    this.vo.innerHTML = r(this.Sb.Gp);
-    this.Yn.innerHTML = r(this.Sb.Ep);
-    this.$n.innerHTML = r(this.Sb.Fp);
-    this.xo.innerHTML = r(this.Sb.Hp);
-    this.wq.innerHTML = r(this.Sb.Sj);
+    this.Mo.innerHTML = formatNumber(this.Sb.No);
+    this.Ij.innerHTML = formatNumber(this.Sb.$o);
+    this.vo.innerHTML = formatNumber(this.Sb.Gp);
+    this.Yn.innerHTML = formatNumber(this.Sb.Ep);
+    this.$n.innerHTML = formatNumber(this.Sb.Fp);
+    this.xo.innerHTML = formatNumber(this.Sb.Hp);
+    this.wq.innerHTML = formatNumber(this.Sb.Sj);
     if (this.$f != this.Sb.xd) {
       this.Es.innerHTML = this.Sb.Vk();
       var f = this.Sb.ll;
@@ -26120,8 +26121,8 @@ cA.prototype.Xa = function() {
     this.$f = this.Sb.xd;
     this.Sv = this.Sb.Sj
   }
-  this.Uv !== c && (this.Uv = c, this.yq.innerHTML = r(c));
-  this.Jh !== d && (this.Jh = d, this.pb.style.width = d + "px", this.kd.innerHTML = a > b ? "Max" : r(a) + " / " + r(b))
+  this.Uv !== c && (this.Uv = c, this.yq.innerHTML = formatNumber(c));
+  this.Jh !== d && (this.Jh = d, this.pb.style.width = d + "px", this.kd.innerHTML = a > b ? "Max" : formatNumber(a) + " / " + formatNumber(b))
 };
 
 function dA(a, b) {
@@ -26962,15 +26963,15 @@ e.ba = function() {
     h = w.kb.Jg.length - this.Iy,
     b = b.oj - this.JB,
     l = w.i.Ig.Ze.length - this.wy;
-  this.vv != a && (this.vv = a, this.Qw.innerHTML = r(a));
-  this.Ek != c && (this.Ek = c, this.Tm.innerHTML = r(c));
-  this.Fk != d && (this.Fk = d, this.Um.innerHTML = r(d));
-  this.Hk != f && (this.Hk = f, this.Vm.innerHTML = r(f));
+  this.vv != a && (this.vv = a, this.Qw.innerHTML = formatNumber(a));
+  this.Ek != c && (this.Ek = c, this.Tm.innerHTML = formatNumber(c));
+  this.Fk != d && (this.Fk = d, this.Um.innerHTML = formatNumber(d));
+  this.Hk != f && (this.Hk = f, this.Vm.innerHTML = formatNumber(f));
   this.Ck != g && (this.Ck = g, this.vm.innerHTML =
-    r(g));
-  this.Bu != h && (this.Bu = h, this.$t.innerHTML = r(h));
-  this.Kk != b && (this.Kk = b, this.aj.innerHTML = r(b));
-  this.yu != l && (this.yu = l, this.Mt.innerHTML = r(l))
+    formatNumber(g));
+  this.Bu != h && (this.Bu = h, this.$t.innerHTML = formatNumber(h));
+  this.Kk != b && (this.Kk = b, this.aj.innerHTML = formatNumber(b));
+  this.yu != l && (this.yu = l, this.Mt.innerHTML = formatNumber(l))
 };
 
 function QA(a) {
@@ -27106,7 +27107,7 @@ SA.prototype.J = function() {
 SA.prototype.ba = function() {
   this.Ls || TA(this);
   var a, b, c, d, f, g, h, l, n = w.i.ae;
-  for (a = 0; a < Qr.length; a++) b = Qr[a].h, c = this.Ao[b], d = n.Qi[b], f = this.Ao[b], g = n.pj[b], h = this.Dv[b], l = Qr[a].Fb, c != d && (this.Ao[b] = d, c = this.sy[b], c.innerHTML = xa(d)), f != g && (this.sz[b] = g, d = this.tu[b], d.innerHTML = r(g)), h != l && (this.Dv[b] = l, b = this.ex[b], b.innerHTML = r(l))
+  for (a = 0; a < Qr.length; a++) b = Qr[a].h, c = this.Ao[b], d = n.Qi[b], f = this.Ao[b], g = n.pj[b], h = this.Dv[b], l = Qr[a].Fb, c != d && (this.Ao[b] = d, c = this.sy[b], c.innerHTML = xa(d)), f != g && (this.sz[b] = g, d = this.tu[b], d.innerHTML = formatNumber(g)), h != l && (this.Dv[b] = l, b = this.ex[b], b.innerHTML = r(l))
 };
 
 function TA(a) {

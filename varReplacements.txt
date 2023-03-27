@@ -1,5 +1,6 @@
 $q      ->  speedWalkerPotion
 ar      ->  fasterFarmingPotion
+au      ->  formatNumberSuffix
 br      ->  fasterInfestationPotion
 cr      ->  infiniteScrollsPotion
 dr      ->  guaranteedItemDropsPotion
@@ -11,6 +12,7 @@ ir      ->  higherItemValuesPotion
 jr      ->  autoFiringScrollsPotion
 kr      ->  doubleGoldDropsPotion
 lr      ->  doubleItemDropsPotion
+r       ->  formatNumber
 Bg      ->  randomTreasureRoomPotion
 Rr      ->  AP Upgrades
   [i]
@@ -48,3 +50,6 @@ E (object)
   I think it has the kill upgrades in it
 
 w.i.ae.Dd is how many points you have
+w is declared on line 29139
+  i is declared onn line 41189
+    ae is declared on line 41198
